@@ -5,21 +5,17 @@
  */
 package pokedexf;
 
-/**
- *
- * @author Mathews
- */
-
-/*
-    ataque
-    nivel
-    nome
-    altura
-    defesa
-    hp
-
-*/
-public class Pokemon
+public abstract class Pokemon
 {
-    
+    private String nome;
+    private char sexo;
+    private int nivel;
+    private int hp;
+    private int peso;
+    private int xp;
+    private int posicao;
+    private String raridade;
+
+    public abstract void emitesom();
+      
 }

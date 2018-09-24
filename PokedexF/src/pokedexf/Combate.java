@@ -6,10 +6,9 @@
 package pokedexf;
 
 /**
- *
- * @author Mathews
+Ataque e defesa
  */
-public class Grama extends Pokemon
+public class Combate
 {
     
 }

@@ -9,14 +9,7 @@ package pokedexf;
  *
  * @author Mathews
  */
-public class PokedexF
+public class Normal extends Pokemon
 {
-
-    public static void main(String[] args)
-    {
-        /*
-        criar variavel min e max, para quando formos treinar um pokemon, podermos evolui-lo;
-        */
-    }
     
 }
