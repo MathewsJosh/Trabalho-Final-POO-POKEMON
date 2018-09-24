@@ -7,14 +7,14 @@ package pokedexf;
 
 public abstract class Pokemon
 {
-    private String nome;
-    private char sexo;
-    private int nivel;
-    private int hp;
-    private int peso;
-    private int xp;
-    private int posicao;
-    private String raridade;
+    protected String nome;
+    protected char sexo;
+    protected int nivel;
+    protected int hp;
+    protected int peso;
+    protected int xp;
+    protected int posicao;
+    protected String raridade;
 
     public abstract void emitesom();
       
