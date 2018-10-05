@@ -11,5 +11,23 @@ package pokedexf;
  */
 public class Fogo extends Pokemon
 {
+        public int ember (){
+        System.out.println("Cospe fogo");
+        return -40;
+    }
     
+        public int fireBlast (){
+        System.out.println("Raio de fogo");
+        return -70;
+    }
+        
+    public int fireSpin (){
+        System.out.println("Espiral de fogo");
+        return -15;
+    }
+    
+    public int inferno (){
+        System.out.println("Queima o oponente");
+        return -100;
+    }
 }

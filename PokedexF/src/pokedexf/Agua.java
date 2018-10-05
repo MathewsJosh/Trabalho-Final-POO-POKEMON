@@ -11,5 +11,28 @@ package pokedexf;
  */
 public class Agua extends Pokemon
 {
+    public int bubble (){
+        System.out.println("Bolhas");
+        return -10;
+    }
+
+    public int dive (){
+        System.out.println("O pokemon mergulha e ataca!");
+        return -80;
+    }
     
+    public int hydroCannon (){
+        System.out.println("Jato D'água!");
+        return -150;
+    }
+    
+    public int waterPulse(){
+        System.out.println("Pulso de água!");
+        return -60;
+    }
+    
+    public int surf(){
+        System.out.println("O pokemon surfa");
+        return -90;
+    }
 }
