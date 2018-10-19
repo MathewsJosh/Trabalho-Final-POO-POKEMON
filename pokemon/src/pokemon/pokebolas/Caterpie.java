@@ -4,11 +4,11 @@
  * and open the template in the editor.
  */
 package pokemon.pokebolas;
-
+import pokemon.*;
 /**
  *
  * @author Renan
  */
-public class Caterpie {
+public class Caterpie extends Pokemon implements Inseto{
     
 }

@@ -4,11 +4,11 @@
  * and open the template in the editor.
  */
 package pokemon.pokebolas;
-
+import pokemon.*;
 /**
  *
  * @author Renan
  */
-public class Diglett {
+public class Diglett extends Pokemon implements Normal {
     
 }

@@ -4,11 +4,12 @@
  * and open the template in the editor.
  */
 package pokemon.pokebolas;
+import pokemon.*;
 
 /**
  *
  * @author Renan
  */
-public class Bulbasaur {
+public class Bulbasaur extends Pokemon implements Grama;implements veneno {
     
 }
