@@ -6,7 +6,7 @@
 package pokemon;
 
 /**
- *
+ *Package de tipos do pokemon, Tipo Gelo
  * @author Renan
  */
 public interface Gelo  {

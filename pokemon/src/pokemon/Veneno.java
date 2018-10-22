@@ -6,7 +6,7 @@
 package pokemon;
 
 /**
- *
+ *Package de tipos do pokemon, Tipo Veneno
  * @author Renan
  */
 public interface Veneno  {

@@ -7,9 +7,9 @@ package pokemon.pokebolas;
 import pokemon.*;
 
 /**
- *
+ * Classe Base de pokemon
  * @author Renan
  */
-public class Bulbasaur extends Pokemon implements Grama;implements veneno {
+public class Bulbasaur extends Pokemon implements Grama implements veneno {
     
 }

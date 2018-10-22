@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pokemon.pokebolas;
-import pokemon.*;
+package pokemon;
+
 /**
- * Classe Base de pokemon
+ *Package de tipos do pokemon, Tipo Noturno
  * @author Renan
  */
-public class Mankey extends Pokemon implements Normal{
+public interface Noturno {
     
 }

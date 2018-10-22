@@ -6,7 +6,7 @@
 package pokemon;
 
 /**
- * Classe do tipo pokemon grama
+ * Package de tipos do pokemon, Tipo Grama
  * @author Renan,Mathew,Júlia
  */
 public interface Grama {

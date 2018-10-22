@@ -6,7 +6,7 @@
 package pokemon;
 
 /**
- *
+ *Package de tipos do pokemon, Tipo Inseto
  * @author Renan
  */
 public interface Inseto  {

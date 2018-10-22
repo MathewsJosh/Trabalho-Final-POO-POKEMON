@@ -6,7 +6,7 @@
 package pokemon.pokebolas;
 import pokemon.*;
 /**
- *
+ * Classe Base de pokemon
  * @author Renan
  */
 public class Diglett extends Pokemon implements Normal {

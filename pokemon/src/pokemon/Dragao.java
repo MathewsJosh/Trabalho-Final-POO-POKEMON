@@ -6,7 +6,7 @@
 package pokemon;
 
 /**
- *
+ *Package de tipos do pokemon, Tipo Dragão
  * @author Renan
  */
 public interface Dragao{

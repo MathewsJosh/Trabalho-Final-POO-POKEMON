@@ -6,7 +6,7 @@
 package pokemon;
 
 /**
- *
+ *Package de tipos do pokemon, Tipo Fogo
  * @author Renan
  */
 public interface Fogo {

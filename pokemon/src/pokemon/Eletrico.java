@@ -6,7 +6,7 @@
 package pokemon;
 
 /**
- *
+ *Package de tipos do pokemon, Tipo Elétrico
  * @author Renan
  */
 public interface Eletrico {

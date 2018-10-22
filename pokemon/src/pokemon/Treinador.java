@@ -14,6 +14,11 @@ public class Treinador {
     protected int idade;
     protected int insigneas;
     
+    /**
+     * Construtor para um treinador genérico
+     * @param nome
+     * @param idade 
+     */
     public Treinador(String nome,int idade){
         this.nome = "nome";
         this.idade = idade;

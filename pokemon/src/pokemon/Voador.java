@@ -6,7 +6,7 @@
 package pokemon;
 
 /**
- *
+ *Package de tipos do pokemon, Tipo Voador
  * @author Renan
  */
 public interface Voador  {
