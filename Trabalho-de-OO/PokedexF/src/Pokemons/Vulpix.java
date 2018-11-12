@@ -7,6 +7,7 @@ package Pokemons;
 
 import TiposDePokemon.*;
 import Sons.*;
+import java.util.Random;
 import pokedexf.*;
 
 /**
@@ -15,16 +16,26 @@ import pokedexf.*;
  */
 public class Vulpix extends Pokemon implements Fogo
 {
-    protected int hp;
-    protected int ataque;
-    protected int defesa;
-    protected int ataqueEspecial;
-    protected int defesaEspecial;
-    protected int velocidade;
-    protected static int pp;
 
     public Vulpix()
     {
+        super();
+        this.nome = "Vulpix";
+        this.peso = 9.9f;
+
+        Random s = new Random();
+        int x = s.nextInt(1);
+        if (x == 1)
+        {
+            this.sexo = 'M';
+        }
+        else
+        {
+            this.sexo = 'F';
+        }
+        this.nivel = 0;
+        this.xp = 0;
+
         this.hp = 186;
         this.ataque = 78;
         this.defesa = 76;
@@ -32,7 +43,7 @@ public class Vulpix extends Pokemon implements Fogo
         this.defesaEspecial = 121;
         this.velocidade = 121;
     }
-    
+
     /**
      * Sobrescrição da Classe Mãe
      *
@@ -40,14 +51,13 @@ public class Vulpix extends Pokemon implements Fogo
      *
      * @author Mathews
      */
-    @Override
     public void emitesom()
     {
         TocarSom som = new TocarSom();
         som.play("VulpixSound");
     }
 
-        /**
+    /**
      * Sobrescrição da Interface Fogo
      *
      * Função: Definir ataques especiais
@@ -78,6 +88,5 @@ public class Vulpix extends Pokemon implements Fogo
     {
         return 1;
     }
-    
-    
+
 }

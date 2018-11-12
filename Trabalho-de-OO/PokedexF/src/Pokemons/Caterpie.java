@@ -8,6 +8,7 @@ package Pokemons;
 import TiposDePokemon.*;
 import pokedexf.*;
 import Sons.*;
+import java.util.Random;
 
 /**
  * Classe Base de pokemon
@@ -17,17 +18,25 @@ import Sons.*;
 public class Caterpie extends Pokemon implements Inseto
 {
 
-    protected int hp;
-    protected int ataque;
-    protected int defesa;
-    protected int ataqueEspecial;
-    protected int defesaEspecial;
-    protected int velocidade;
-    protected static int pp;
-//Utilizar pp como "mana" provavelnte terá valor 20
-
     public Caterpie()
     {
+        super();
+        this.nome = "Caterpie";
+        this.peso = 2.9f;
+        
+        Random s = new Random();
+        int x = s.nextInt(1);
+        if (x == 1)
+        {
+            this.sexo = 'M';
+        }
+        else
+        {
+            this.sexo = 'F';
+        }
+        this.nivel = 0;
+        this.xp = 0;
+  
         this.hp = 200;
         this.ataque = 58;
         this.defesa = 67;
@@ -43,7 +52,7 @@ public class Caterpie extends Pokemon implements Inseto
      *
      * @author Mathews
      */
-    @Override
+
     public void emitesom()
     {
         TocarSom som = new TocarSom();

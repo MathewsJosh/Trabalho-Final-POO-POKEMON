@@ -5,17 +5,43 @@
  */
 package pokedexf;
 
+import TiposDePokemon.*;
+import Sons.*;
+import java.util.Random;
+import pokedexf.*;
+
+/**
+ *
+ * @author Mathews
+ */
 public abstract class Pokemon
 {
     protected String nome;
     protected char sexo;
     protected int nivel;
-    protected int hp;
-    protected int peso;
+    protected float peso;
     protected int xp;
-    protected int posicao;
-    protected String raridade;
+    protected String som;
 
-    public abstract void emitesom();
-      
+    protected int hp;
+    protected int ataque;
+    protected int defesa;
+    protected int ataqueEspecial;
+    protected int defesaEspecial;
+    protected int velocidade;
+    
+
+    protected static int pp = 100; //Mana
+
+    public Pokemon()
+    {
+    }
+
+    public void treinar()
+    {
+    }
+
+
+
+    //public void emiteSom();
 }

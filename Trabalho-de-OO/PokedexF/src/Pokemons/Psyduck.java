@@ -7,6 +7,7 @@ package Pokemons;
 
 import TiposDePokemon.*;
 import Sons.*;
+import java.util.Random;
 import pokedexf.*;
 
 /**
@@ -15,16 +16,26 @@ import pokedexf.*;
  */
 public class Psyduck extends Pokemon implements Agua
 {
-    protected int hp;
-    protected int ataque;
-    protected int defesa;
-    protected int ataqueEspecial;
-    protected int defesaEspecial;
-    protected int velocidade;
-    protected static int pp;
 
     public Psyduck()
     {
+        super();
+        this.nome = "Psyduck";
+        this.peso = 19.6f;
+        
+        Random s = new Random();
+        int x = s.nextInt(1);
+        if (x == 1)
+        {
+            this.sexo = 'M';
+        }
+        else
+        {
+            this.sexo = 'F';
+        }
+        this.nivel = 0;
+        this.xp = 0;
+        
         this.hp = 210;
         this.ataque = 98;
         this.defesa = 90;
@@ -40,7 +51,7 @@ public class Psyduck extends Pokemon implements Agua
      *
      * @author Mathews
      */
-    @Override
+
     public void emitesom()
     {
         TocarSom som = new TocarSom();

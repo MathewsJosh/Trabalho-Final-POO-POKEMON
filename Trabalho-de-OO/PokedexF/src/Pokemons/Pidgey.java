@@ -7,6 +7,7 @@ package Pokemons;
 
 import TiposDePokemon.*;
 import Sons.*;
+import java.util.Random;
 import pokedexf.*;
 
 /**
@@ -15,16 +16,26 @@ import pokedexf.*;
  */
 public class Pidgey extends Pokemon implements Normal, Voador
 {
-    protected int hp;
-    protected int ataque;
-    protected int defesa;
-    protected int ataqueEspecial;
-    protected int defesaEspecial;
-    protected int velocidade;
-    protected static int pp;
 
     public Pidgey()
     {
+                super();
+        this.nome = "Pidgey";
+        this.peso = 1.8f;
+        
+        Random s = new Random();
+        int x = s.nextInt(1);
+        if (x == 1)
+        {
+            this.sexo = 'M';
+        }
+        else
+        {
+            this.sexo = 'F';
+        }
+        this.nivel = 0;
+        this.xp = 0;
+        
         this.hp = 190;
         this.ataque = 85;
         this.defesa = 76;
@@ -40,7 +51,7 @@ public class Pidgey extends Pokemon implements Normal, Voador
      *
      * @author Mathews
      */
-    @Override
+
     public void emitesom()
     {
         TocarSom som = new TocarSom();

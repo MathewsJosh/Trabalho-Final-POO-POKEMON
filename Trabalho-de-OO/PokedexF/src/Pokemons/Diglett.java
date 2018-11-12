@@ -7,6 +7,7 @@ package Pokemons;
 
 import TiposDePokemon.*;
 import Sons.*;
+import java.util.Random;
 import pokedexf.*;
 
 /**
@@ -15,16 +16,26 @@ import pokedexf.*;
  */
 public class Diglett extends Pokemon implements Terra
 {
-    protected int hp;
-    protected int ataque;
-    protected int defesa;
-    protected int ataqueEspecial;
-    protected int defesaEspecial;
-    protected int velocidade;
-    protected static int pp;
 
     public Diglett()
     {
+        super();
+        this.nome = "Diglett";
+        this.peso = 0.8f;
+
+        Random s = new Random();
+        int x = s.nextInt(1);
+        if (x == 1)
+        {
+            this.sexo = 'M';
+        }
+        else
+        {
+            this.sexo = 'F';
+        }
+        this.nivel = 0;
+        this.xp = 0;
+
         this.hp = 130;
         this.ataque = 103;
         this.defesa = 49;
@@ -40,12 +51,12 @@ public class Diglett extends Pokemon implements Terra
      *
      * @author Mathews
      */
-    @Override
     public void emitesom()
     {
         TocarSom som = new TocarSom();
         som.play("OddishSound");
     }
+
     /**
      * Sobrescrição da Interface Terra
      *

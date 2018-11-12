@@ -7,6 +7,7 @@ package Pokemons;
 
 import TiposDePokemon.*;
 import Sons.*;
+import java.util.Random;
 import pokedexf.*;
 
 /**
@@ -15,16 +16,26 @@ import pokedexf.*;
  */
 public class Zubat extends Pokemon implements Veneno, Voador
 {
-    protected int hp;
-    protected int ataque;
-    protected int defesa;
-    protected int ataqueEspecial;
-    protected int defesaEspecial;
-    protected int velocidade;
-    protected static int pp;
 
     public Zubat()
     {
+                super();
+        this.nome = "Zubat";
+        this.peso = 7.5f;
+        
+        Random s = new Random();
+        int x = s.nextInt(1);
+        if (x == 1)
+        {
+            this.sexo = 'M';
+        }
+        else
+        {
+            this.sexo = 'F';
+        }
+        this.nivel = 0;
+        this.xp = 0;
+        
         this.hp = 190;
         this.ataque = 85;
         this.defesa = 67;
@@ -40,7 +51,7 @@ public class Zubat extends Pokemon implements Veneno, Voador
      *
      * @author Mathews
      */
-    @Override
+
     public void emitesom()
     {
         TocarSom som = new TocarSom();

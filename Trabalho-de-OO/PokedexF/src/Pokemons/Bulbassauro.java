@@ -7,6 +7,7 @@ package Pokemons;
 
 import TiposDePokemon.*;
 import Sons.*;
+import java.util.Random;
 import pokedexf.*;
 
 /**
@@ -17,47 +18,50 @@ import pokedexf.*;
 public class Bulbassauro extends Pokemon implements Grama, Veneno
 {
 
-    protected int hp;
-    protected int ataque;
-    protected int defesa;
-    protected int ataqueEspecial;
-    protected int defesaEspecial;
-    protected int velocidade;
-    protected static int pp;
-
     public Bulbassauro()
     {
+        super();
+        this.nome = "Bulbassauro";
+        Random s = new Random();
+        int x = s.nextInt(1);
+        if (x == 1)
+        {
+            this.sexo = 'M';
+        }
+        else
+        {
+            this.sexo = 'F';
+        }
+        this.nivel = 0;
+        this.peso = 6.9f;
+        this.xp = 0;
         this.hp = 200;
         this.ataque = 92;
         this.defesa = 92;
         this.ataqueEspecial = 121;
         this.defesaEspecial = 121;
         this.velocidade = 85;
-        Bulbassauro.pp = 20;
     }
 
     /**
      * Sobrescrição da Classe Mãe
-     *  
+     *
      * Função: Tocar o Som do Pokemon
-     * 
+     *
      * @author Mathews
      */
-    
-    @Override
     public void emitesom()
     {
         TocarSom som = new TocarSom();
         som.play("BulbasaurSound");
     }
-        
+
     /**
      * Sobrescrição da interface de ataque Grama
      *
      * @author Mathews
-     * @return 
+     * @return
      */
-    
     @Override
     public int seedBomb()
     {
@@ -89,9 +93,8 @@ public class Bulbassauro extends Pokemon implements Grama, Veneno
      * Sobrescrição da interface de ataque Veneno
      *
      * @author Mathews
-     * @return 
+     * @return
      */
-    
     @Override
     public int acid()
     {

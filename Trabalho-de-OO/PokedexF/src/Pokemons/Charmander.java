@@ -8,6 +8,7 @@ package Pokemons;
 import TiposDePokemon.*;
 import pokedexf.*;
 import Sons.*;
+import java.util.Random;
 
 /**
  *
@@ -16,17 +17,24 @@ import Sons.*;
 public class Charmander extends Pokemon implements Fogo
 {
 
-    protected int hp;
-    protected int ataque;
-    protected int defesa;
-    protected int ataqueEspecial;
-    protected int defesaEspecial;
-    protected int velocidade;
-    protected static int pp;
-//Utilizar pp como "mana" provavelnte terá valor 20
-
     public Charmander()
-    {
+    {        super();
+        this.nome = "Charmander";
+        this.peso = 8.5f;
+        
+        Random s = new Random();
+        int x = s.nextInt(1);
+        if (x == 1)
+        {
+            this.sexo = 'M';
+        }
+        else
+        {
+            this.sexo = 'F';
+        }
+        this.nivel = 0;
+        this.xp = 0;
+        
         this.hp = 188;
         this.ataque = 98;
         this.defesa = 81;
@@ -42,7 +50,7 @@ public class Charmander extends Pokemon implements Fogo
      *
      * @author Mathews
      */
-    @Override
+
     public void emitesom()
     {
         TocarSom som = new TocarSom();

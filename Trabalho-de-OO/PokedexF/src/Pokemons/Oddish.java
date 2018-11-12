@@ -7,6 +7,7 @@ package Pokemons;
 
 import TiposDePokemon.*;
 import Sons.TocarSom;
+import java.util.Random;
 import pokedexf.*;
 
 /**
@@ -15,23 +16,26 @@ import pokedexf.*;
  */
 public class Oddish extends Pokemon implements Grama, Veneno
 {
-    protected int hp;
-    protected int ataque;
-    protected int defesa;
-    protected int ataqueEspecial;
-    protected int defesaEspecial;
-    protected int velocidade;
-    protected static int pp;
 
-    /**
-     * Sobrescrição da Classe Mãe
-     *
-     * Função: Tocar o Som do Pokemon
-     *
-     * @author Mathews
-     */
     public Oddish()
     {
+        super();
+        this.nome = "Oddish";
+        this.peso = 5.4f;
+        
+        Random s = new Random();
+        int x = s.nextInt(1);
+        if (x == 1)
+        {
+            this.sexo = 'M';
+        }
+        else
+        {
+            this.sexo = 'F';
+        }
+        this.nivel = 0;
+        this.xp = 0;
+        
         this.hp = 200;
         this.ataque = 94;
         this.defesa = 103;
@@ -47,7 +51,7 @@ public class Oddish extends Pokemon implements Grama, Veneno
      *
      * @author Mathews
      */
-    @Override
+
     public void emitesom()
     {
         TocarSom som = new TocarSom();

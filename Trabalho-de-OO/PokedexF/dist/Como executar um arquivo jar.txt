@@ -1,0 +1,10 @@
+1) Primeiramente, certifique-se de ter usado o comando do netbeans "Limpar e construir" no projeto.
+
+2) Abra o diretório do arquivo jar que acabou de ser criado.
+
+3) Pressione Shift+Botão direito do mouse e abra o cmd.
+
+4) Use o comando abaixo substituindo o nome pelo nome do .jar.
+
+
+java -jar "nome do arquivo".jar
