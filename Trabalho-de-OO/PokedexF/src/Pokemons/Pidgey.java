@@ -11,51 +11,135 @@ import java.util.Random;
 import pokedexf.*;
 
 /**
- *
  * @author Mathews
  */
-public class Pidgey extends Pokemon implements Normal, Voador
+public final class Pidgey extends Pokemon implements Normal, Voador
 {
+    String som = "PidgeySound";
 
     public Pidgey()
     {
-                super();
-        this.nome = "Pidgey";
-        this.peso = 1.8f;
-        
-        Random s = new Random();
-        int x = s.nextInt(1);
-        if (x == 1)
-        {
-            this.sexo = 'M';
-        }
-        else
-        {
-            this.sexo = 'F';
-        }
-        this.nivel = 0;
-        this.xp = 0;
-        
-        this.hp = 190;
-        this.ataque = 85;
-        this.defesa = 76;
-        this.ataqueEspecial = 67;
-        this.defesaEspecial = 67;
-        this.velocidade = 105;
+        super("Pidgey", 1.8f, 0, 0, 190, 85, 76, 67, 67, 105, "PidgeySound", 9);
     }
 
     /**
-     * Sobrescrição da Classe Mãe
+     * Apresenta todos os dados do Pokemon
      *
-     * Função: Tocar o Som do Pokemon
+     */
+    @Override
+    public void apresentarPokemon()
+    {
+        super.apresentarPokemon();
+    }
+
+    /**
+     * Sobrescrição da Classe Mãe Função: Tocar o Som do Pokemon
      *
      * @author Mathews
      */
-
+    @Override
     public void emitesom()
     {
-        TocarSom som = new TocarSom();
-        som.play("PidgeySound");
+        super.emitesom();
+    }
+
+    /**
+     * Método atacar() seleciona o ataque de acordo com a possibilidade do mesmo
+     * ocorrer
+     *
+     * @author Mathews
+     * @return
+     */
+    @Override
+    public int atacar()
+    {
+        Random possibilidade = new Random();
+        int prob = possibilidade.nextInt(101);
+
+        switch (defineAtaque1())
+        {
+            case 0:                                                             //Ataque basico
+                return basicAttack();
+            case 1:                                                             //Ataques especiais tipo Voador
+                return aerialAce();
+            case 2:
+                if (prob <= 75)
+                {
+                    return airCutter();
+                }
+                else
+                {
+                    return basicAttack();
+                }
+            case 3:
+                if (prob <= 50)
+                {
+                    return drillPeck();
+                }
+                else
+                {
+                    return basicAttack();
+                }
+            case 4:
+                if (prob <= 25)
+                {
+                    return hurricane();
+                }
+                else
+                {
+                    return basicAttack();
+                }
+            case 5:                                                             //Ataques Especiais tipo Normal
+                return cut();
+            case 6:
+                if (prob <= 50)
+                {
+                    return furyAttack();
+                }
+                else
+                {
+                    return basicAttack();
+                }
+            case 7:
+                if (prob <= 25)
+                {
+                    return gigaImpact();
+                }
+                else
+                {
+                    return basicAttack();
+                }
+            case 8:
+                if (prob <= 25)
+                {
+                    return hornAttack();
+                }
+                else
+                {
+                    return basicAttack();
+                }
+
+            default:
+                System.out.println("Erro! Array fora dos Limites");
+                return basicAttack();
+        }
+    }
+
+    Random attack = new Random();
+    int dano;
+
+    /**
+     * Sobrescrição da interface de ataque básico
+     *
+     * @author Mathews
+     * @return
+     */
+    @Override
+    public int basicAttack()
+    {
+        System.out.println("Ataque Básico!");
+        dano = attack.nextInt(this.ataque);
+        return dano;
     }
 
     /**
@@ -69,29 +153,36 @@ public class Pidgey extends Pokemon implements Normal, Voador
     @Override
     public int cut()
     {
-        System.out.println("Corte");
-        return -90;
+        System.out.print("Ataque do tipo Normal:   ");
+        System.out.println("Corte!");
+        dano = attack.nextInt(this.ataqueEspecial - 52);
+        return dano;
     }
 
     @Override
     public int furyAttack()
     {
-        System.out.println("ataque de furia!");
-        return -40;
+        System.out.print("Ataque do tipo Normal:   ");
+        System.out.println("Ataque de Fúria!");
+        dano = attack.nextInt(((this.ataqueEspecial - 15) + 1) + 15);
+        return dano;
     }
 
     @Override
     public int gigaImpact()
     {
-        System.out.println("Giga Impact");
-        return -80;
+        System.out.print("Ataque do tipo Normal:   ");
+        System.out.println("Giga Impacto!");
+        dano = attack.nextInt(((this.ataqueEspecial - 45) + 1) + 45);
+        return dano;
     }
 
     @Override
     public int hornAttack()
     {
-         System.out.println("Ataque de cifre");
-        return -100;
+        System.out.print("Ataque do tipo Normal:   ");
+        System.out.println("Ataque de Chifre! - ULTIMATE");
+        return this.ataqueEspecial;
     }
 
     /**
@@ -105,25 +196,36 @@ public class Pidgey extends Pokemon implements Normal, Voador
     @Override
     public int aerialAce()
     {
-        return 1;
+        System.out.print("Ataque do tipo Voador:   ");
+        System.out.println("Ataque Aéreo!");
+        dano = attack.nextInt(this.ataqueEspecial - 52);
+        return dano;
     }
 
     @Override
     public int airCutter()
     {
-        return 1;
+        System.out.print("Ataque do tipo Voador:   ");
+        System.out.println("Lâmina de Ar!");
+        dano = attack.nextInt((this.ataqueEspecial - 15) + 1) + 15;
+        return dano;
     }
 
     @Override
     public int drillPeck()
     {
-        return 1;
+        System.out.print("Ataque do tipo Voador:   ");
+        System.out.println("Bico Broca!");
+        dano = attack.nextInt((this.ataqueEspecial - 45) + 1) + 45;
+        return dano;
     }
 
     @Override
     public int hurricane()
     {
-        return 1;
+        System.out.print("Ataque do tipo Voador:   ");
+        System.out.println("Furacão! - ULTIMATE");
+        return this.ataqueEspecial;
     }
 
 }

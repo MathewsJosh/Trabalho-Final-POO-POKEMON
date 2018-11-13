@@ -11,6 +11,8 @@ package TiposDePokemon;
  */
 public interface Fogo
 {
+    public int basicAttack();
+
     public int ember();
 
     public int fireBlast();

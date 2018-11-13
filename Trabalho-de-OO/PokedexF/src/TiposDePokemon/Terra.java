@@ -11,11 +11,13 @@ package TiposDePokemon;
  */
 public interface Terra
 {
+    public int basicAttack();
+
     public int sandAttack();
-    
+
     public int mudSlap();
-    
+
     public int magnitude();
-    
+
     public int bulldoze();
 }

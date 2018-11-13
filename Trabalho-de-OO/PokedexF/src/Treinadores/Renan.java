@@ -5,128 +5,129 @@
  */
 package Treinadores;
 
-/**
+import TiposDePokemon.*;
+import pokedexf.*;
+import Pokemons.*;
+import java.util.Scanner;
+
+/** Classe Renan é um Treinador com todos os seus dados definidos
  *
  * @author Mathews
  */
-public class Renan
+public final class Renan extends Treinador
 {
-    protected String nome;
-    protected int idade;
-    protected String genero;
-
-    protected int insignias;
-    protected int numPokemons;
-    protected int nivel;
-    protected int xpT;
-
     public Renan()
     {
-        this.nome = "Renan";
-        this.idade = 19;
-        this.genero = "Masculino";
-        this.insignias = 2;
-        this.numPokemons = 4;
-        this.nivel = 1;
-        this.xpT = 50;
-    }
-
-    public void apresentaTreinador()
-    {
-        System.out.println("\nTreinador: " + getNome());
-        System.out.println("Idade: " + getIdade());
-        System.out.println("Gênero: " + getGenero());
-
-        System.out.println("Insignias: " + getInsignias());
-        System.out.println("Número de Pokemons: " + getNumPokemons());
-        System.out.println("Nivel do Treinador: " + getNivelAtual());
-        System.out.println("XP Atual: " + getXpT() + "\n");
-
-    }
-
-    public void GanharPokemons(int x)
-    {
-        this.numPokemons = this.numPokemons + x;
-    }
-
-    public void subirDeNivel(int n)                     //A cada 100 de xp, sobe de nivel
-    {
-        this.nivel = nivel + n;
+        super("Renan", 19, "Masculino", 2, 4, 1, 50);
     }
 
     /**
-     * Ganha uma quantidade de xp, caso >=100 sobe de nivel
+     * Exibe os todos os dados do Treinador
+     *
+     */
+    @Override
+    public void apresentaTreinador()
+    {
+        super.apresentaTreinador();
+    }
+
+    /**
+     * Quantos pokemons o treinador pode ganhar a cada vitoria?
+     *
+     * @param x
+     */
+    @Override
+    public void GanharPokemons(int x)
+    {
+        super.GanharPokemons(x);
+    }
+
+    /**
+     * A cada 100 de xp, sobe de nivel. Essa classe funciona em conjunto com a
+     * ganharXpT
+     *
+     * @param n
+     */
+    @Override
+    public void subirDeNivel(int n)                     
+    {
+        super.subirDeNivel(n);
+    }
+
+    /**
+     * Ganhar um quantidade de XP Se a soma do xp atual e xp do parametro forem
+     * maior que 100, Treinador sobe de nivel O valor de XP passado como
+     * parâmetro deverá ser random entre 0 e 100
      *
      * @param xp
      */
-    public void ganharXpT(int xp)                           //Se xp ou this.xpT+xp for 100+, sobe de nivel                 
+    @Override
+    public void ganharXpT(int xp)                                           
     {
-        int soma = xpT + xp;
-        if (soma < 100)                                     //Cada nivel vai de 0 a 99 de xp       
-        {
-            this.xpT = soma;
-        }
-        else                                                //Se soma>100 quer dizer que subiu um nivel
-        {
-            subirDeNivel(xp / 100);
-            this.xpT = soma - 100;
-            System.out.println("\n=>Você subiu de nivel!!!!");
-            System.out.println("=>Xp Atual: " + getXpT());
-            System.out.println("=>Level Atual: " + getNivelAtual());
-        }
-
+        super.ganharXpT(xp);
     }
 
+    @Override
     public String getNome()
     {
         return nome;
     }
 
+    @Override
     public void setNome(String nome)
     {
         this.nome = nome;
     }
 
+    @Override
     public int getIdade()
     {
         return idade;
     }
 
+    @Override
     public void setIdade(int idade)
     {
         this.idade = idade;
     }
 
+    @Override
     public String getGenero()
     {
         return genero;
     }
 
+    @Override
     public void setGenero(String genero)
     {
         this.genero = genero;
     }
 
+    @Override
     public int getInsignias()
     {
         return insignias;
     }
 
+    @Override
     public void setInsignias(int insignias)
     {
         this.insignias = insignias;
     }
 
+    @Override
     public int getNumPokemons()
     {
         return numPokemons;
     }
 
+    @Override
     public int getNivelAtual()
     {
         return nivel;
     }
 
+    @Override
     public int getXpT()
     {
         return xpT;

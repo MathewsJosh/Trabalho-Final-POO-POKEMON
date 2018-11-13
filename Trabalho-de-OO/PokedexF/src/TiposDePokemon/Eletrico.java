@@ -8,12 +8,14 @@ import pokedexf.Pokemon;
  */
 public interface Eletrico
 {
-    public int shockWave ();
+    public int basicAttack();
 
-    public int thunder ();
-    
-    public int spark ();
-    
-    public int thunderShock ();
+    public int shockWave();
+
+    public int thunder();
+
+    public int spark();
+
+    public int thunderShock();
 
 }

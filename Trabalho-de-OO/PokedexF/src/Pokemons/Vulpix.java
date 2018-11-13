@@ -11,37 +11,25 @@ import java.util.Random;
 import pokedexf.*;
 
 /**
- *
  * @author Mathews
  */
-public class Vulpix extends Pokemon implements Fogo
+public final class Vulpix extends Pokemon implements Fogo
 {
+    String som = "VulpixSound";
 
     public Vulpix()
     {
-        super();
-        this.nome = "Vulpix";
-        this.peso = 9.9f;
+        super("Vulpix", 9.9f, 0, 0, 186, 78, 76, 94, 121, 121, "VulpixSound", 5);
+    }
 
-        Random s = new Random();
-        int x = s.nextInt(1);
-        if (x == 1)
-        {
-            this.sexo = 'M';
-        }
-        else
-        {
-            this.sexo = 'F';
-        }
-        this.nivel = 0;
-        this.xp = 0;
-
-        this.hp = 186;
-        this.ataque = 78;
-        this.defesa = 76;
-        this.ataqueEspecial = 94;
-        this.defesaEspecial = 121;
-        this.velocidade = 121;
+    /**
+     * Apresenta todos os dados do Pokemon
+     *
+     */
+    @Override
+    public void apresentarPokemon()
+    {
+        super.apresentarPokemon();
     }
 
     /**
@@ -51,10 +39,79 @@ public class Vulpix extends Pokemon implements Fogo
      *
      * @author Mathews
      */
+    @Override
     public void emitesom()
     {
-        TocarSom som = new TocarSom();
-        som.play("VulpixSound");
+        super.emitesom();
+    }
+
+    /**
+     * Método atacar() seleciona o ataque de acordo com a possibilidade do mesmo
+     * ocorrer
+     *
+     * @author Mathews
+     * @return
+     */
+    @Override
+    public int atacar()
+    {
+        Random possibilidade = new Random();
+        int prob = possibilidade.nextInt(101);
+
+        switch (defineAtaque1())
+        {
+            case 0:                                                             //Ataque basico
+                return basicAttack();
+            case 1:                                                             //Ataques especiais tipo Grama
+                return ember();
+            case 2:
+                if (prob <= 75)
+                {
+                    return fireBlast();
+                }
+                else
+                {
+                    return basicAttack();
+                }
+            case 3:
+                if (prob <= 50)
+                {
+                    return fireSpin();
+                }
+                else
+                {
+                    return basicAttack();
+                }
+            case 4:
+                if (prob <= 25)
+                {
+                    return inferno();
+                }
+                else
+                {
+                    return basicAttack();
+                }
+            default:
+                System.out.println("Erro! Array fora dos Limites");
+                return basicAttack();
+        }
+    }
+
+    Random attack = new Random();
+    int dano;
+
+    /**
+     * Sobrescrição da interface de ataque básico
+     *
+     * @author Mathews
+     * @return
+     */
+    @Override
+    public int basicAttack()
+    {
+        System.out.println("Ataque Básico!");
+        dano = attack.nextInt(this.ataque);
+        return dano;
     }
 
     /**
@@ -68,25 +125,36 @@ public class Vulpix extends Pokemon implements Fogo
     @Override
     public int ember()
     {
-        return 1;
+        System.out.print("Ataque do tipo Fogo!   ");
+        System.out.println("Brasa!");
+        dano = attack.nextInt(this.ataqueEspecial - 64);
+        return dano;
     }
 
     @Override
     public int fireBlast()
     {
-        return 1;
+        System.out.print("Ataque do tipo Fogo!   ");
+        System.out.println("Explosão de Fogo!");
+        dano = attack.nextInt((this.ataqueEspecial - 30) + 1) + 30;
+        return dano;
     }
 
     @Override
     public int fireSpin()
     {
-        return 1;
+        System.out.print("Ataque do tipo Fogo!   ");
+        System.out.println("Redemoinho de Fogo!");
+        dano = attack.nextInt((this.ataqueEspecial - 60) + 1) + 60;
+        return dano;
     }
 
     @Override
     public int inferno()
     {
-        return 1;
+        System.out.print("Ataque do tipo Fogo!   ");
+        System.out.println("Inferno! - ULTIMATE");
+        return this.ataqueEspecial;
     }
 
 }

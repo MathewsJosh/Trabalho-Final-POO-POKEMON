@@ -7,13 +7,12 @@ package Treinadores;
 
 import TiposDePokemon.*;
 import pokedexf.*;
-import Pokebolas.*;
 import Pokemons.*;
 import java.util.Scanner;
 
 /**
- * Interface de Criação interativa
- *
+ * Interface de Criação interativa.
+ *  Essa classe não pode ser abstrata, porque ela cria um novo Treinador.
  * @author Mathews
  */
 public class Treinador
@@ -21,12 +20,41 @@ public class Treinador
     protected String nome;
     protected int idade;
     protected String genero;
-
     protected int insignias;
     protected int numPokemons;
     protected int nivel;
     protected int xpT;
 
+    /**
+     * Construtor de sobrecarga padrão para classe Treinador
+     *
+     * @author Mathews
+     * @param name
+     * @param id
+     * @param gen
+     * @param ins
+     * @param num
+     * @param niv
+     * @param xptreinador
+     */
+    public Treinador(String name, int id, String gen, int ins, int num, int niv, int xptreinador)
+    {
+        this.nome = name;
+        this.idade = id;
+        this.genero = gen;
+        this.insignias = ins;
+        this.numPokemons = num;
+        this.nivel = niv;
+        this.xpT = xptreinador;
+
+    }
+
+    /**
+     * Construtor "interativo" da classe Treinador Se não for passado parametro,
+     * você criará um novo treinador do zero
+     *
+     * @author Mathews
+     */
     public Treinador()
     {
         this.insignias = 0;
@@ -76,7 +104,9 @@ public class Treinador
                     flag = 1;
                 }
                 else
+                {
                     throw new erro("\nGênero inválido, tente novamente!");
+                }
             }
             catch (erro erro)
             {
@@ -93,6 +123,10 @@ public class Treinador
         }
     }
 
+    /**
+     * Exibe os todos os dados do Treinador
+     *
+     */
     public void apresentaTreinador()
     {
         System.out.println("\nTreinador: " + getNome());
@@ -106,35 +140,49 @@ public class Treinador
 
     }
 
+    /**
+     * Quantos pokemons o treinador pode ganhar a cada vitoria?
+     *
+     * @param x
+     */
     public void GanharPokemons(int x)
     {
         this.numPokemons = this.numPokemons + x;
     }
 
-    public void subirDeNivel(int n)                     //A cada 100 de xp, sobe de nivel
+    /**
+     * A cada 100 de xp, sobe de nivel. Essa classe funciona em conjunto com a
+     * ganharXpT
+     * @param n
+     */
+    protected void subirDeNivel(int n)                     //A cada 100 de xp, sobe de nivel
     {
         this.nivel = nivel + n;
     }
+
     /**
-     * Ganha uma quantidade de xp, caso >=100 sobe de nivel
-     * @param xp 
+     * Ganhar um quantidade de XP Se a soma do xp atual e xp do parametro forem
+     * maior que 100, Treinador sobe de nivel O valor de XP passado como
+     * parâmetro deverá ser random entre 0 e 100
+     *
+     * @param xp
      */
-    public void ganharXpT(int xp)                           //Se xp ou this.xpT+xp for 100+, sobe de nivel                 
+    public void ganharXpT(int xp)
     {
         int soma = xpT + xp;
-        if (soma < 100)                                     //Cada nivel vai de 0 a 99 de xp       
+        if (soma < 100)
         {
             this.xpT = soma;
         }
-        else                                                //Se soma>100 quer dizer que subiu um nivel
+        else
         {
-            subirDeNivel(xp/100);
+            subirDeNivel(xp / 100);
             this.xpT = soma - 100;
             System.out.println("\n=>Você subiu de nivel!!!!");
-            System.out.println("=>Xp Atual: "+getXpT());
-            System.out.println("=>Level Atual: "+getNivelAtual());
+            System.out.println("=>Xp Atual: " + getXpT());
+            System.out.println("=>Level Atual: " + getNivelAtual());
         }
-        
+
     }
 
     public String getNome()

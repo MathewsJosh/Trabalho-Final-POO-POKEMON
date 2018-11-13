@@ -11,12 +11,14 @@ package TiposDePokemon;
  */
 public interface Grama
 {
+    public int basicAttack();
+
     public int seedBomb();
-    
+
     public int solarBeam();
-    
+
     public int leafBlade();
-    
+
     public int megaDrain();
-            
+
 }

@@ -9,9 +9,7 @@ import Treinadores.*;
 import TiposDePokemon.*;
 import Sons.*;
 import pokedexf.*;
-import Pokebolas.*;
 import Pokemons.*;
-
 
 /**
  *
@@ -22,16 +20,15 @@ public class PokedexF
 
     public static void main(String[] args)                          //Ganhar xp deve ser um random da função combate (se ganhar luta)
     {
-        Treinador p1=new Treinador();
-        p1.apresentaTreinador();
-        p1.ganharXpT(500);
-        
-        Mathews m= new Mathews();
+
+        /*Mathews m = new Mathews();
         m.apresentaTreinador();
-        Bulbassauro b= new Bulbassauro();
-        b.emitesom();
         
+        Treinador t1= new Treinador();*/
         
+        Bulbassauro b = new Bulbassauro();
+        b.apresentarPokemon();
+        System.out.println(b.atacar());
     }
-    
+
 }

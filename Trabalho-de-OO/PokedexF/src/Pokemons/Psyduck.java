@@ -6,56 +6,118 @@
 package Pokemons;
 
 import TiposDePokemon.*;
-import Sons.*;
 import java.util.Random;
 import pokedexf.*;
 
 /**
- *
  * @author Mathews
  */
-public class Psyduck extends Pokemon implements Agua
+public final class Psyduck extends Pokemon implements Agua
 {
+    String som = "PsyduckSound";
 
     public Psyduck()
     {
-        super();
-        this.nome = "Psyduck";
-        this.peso = 19.6f;
-        
-        Random s = new Random();
-        int x = s.nextInt(1);
-        if (x == 1)
-        {
-            this.sexo = 'M';
-        }
-        else
-        {
-            this.sexo = 'F';
-        }
-        this.nivel = 0;
-        this.xp = 0;
-        
-        this.hp = 210;
-        this.ataque = 98;
-        this.defesa = 90;
-        this.ataqueEspecial = 121;
-        this.defesaEspecial = 94;
-        this.velocidade = 103;
+        super("Psyduck", 19.6f, 0, 0, 210, 98, 90, 121, 94, 103, "PsyduckSound", 6);
     }
 
     /**
-     * Sobrescrição da Classe Mãe
+     * Apresenta todos os dados do Pokemon
      *
-     * Função: Tocar o Som do Pokemon
+     */
+    @Override
+    public void apresentarPokemon()
+    {
+        super.apresentarPokemon();
+    }
+
+    /**
+     * Sobrescrição da Classe Mãe Função: Tocar o Som do Pokemon
      *
      * @author Mathews
      */
-
+    @Override
     public void emitesom()
     {
-        TocarSom som = new TocarSom();
-        som.play("PsyduckSound");
+        super.emitesom();
+    }
+
+    /**
+     * Método atacar() seleciona o ataque de acordo com a possibilidade do mesmo
+     * ocorrer
+     *
+     * @author Mathews
+     * @return
+     */
+    @Override
+    public int atacar()
+    {
+        Random possibilidade = new Random();
+        int prob = possibilidade.nextInt(101);
+
+        switch (defineAtaque1())
+        {
+            case 0:                                                             //Ataque basico
+                return basicAttack();
+            case 1:                                                             //Ataques especiais tipo Grama
+                return bubble();
+            case 2:
+                if (prob <= 80)
+                {
+                    return dive();
+                }
+                else
+                {
+                    return basicAttack();
+                }
+            case 3:
+                if (prob <= 60)
+                {
+                    return hydroCannon();
+                }
+                else
+                {
+                    return basicAttack();
+                }
+            case 4:
+                if (prob <= 40)
+                {
+                    return waterPulse();
+                }
+                else
+                {
+                    return basicAttack();
+                }
+            case 5:
+                if (prob <= 20)
+                {
+                    return surf();
+                }
+                else
+                {
+                    return basicAttack();
+                }
+            default:
+                System.out.println("Erro! Array fora dos Limites");
+                return basicAttack();
+        }
+    }
+
+    Random attack = new Random();
+    int dano;
+
+    /**
+     * Sobrescrição da interface de ataque básico
+     *
+     * @author Mathews
+     * @return
+     */
+    @Override
+    public int basicAttack()
+    {
+        System.out.println("Ataque Básico!");
+        dano = attack.nextInt(this.ataque);
+        return dano;
     }
 
     /**
@@ -66,34 +128,49 @@ public class Psyduck extends Pokemon implements Agua
      * @author Mathews
      * @return
      */
+    
     @Override
     public int bubble()
     {
-        return 1;
+        System.out.print("Ataque do tipo Agua!   ");
+        System.out.println("Bolhas!");
+        dano = attack.nextInt(this.ataqueEspecial - 80);
+        return dano;
     }
 
     @Override
     public int dive()
     {
-        return 1;
+        System.out.print("Ataque do tipo Agua!   ");
+        System.out.println("Mergulho!");
+        dano = attack.nextInt((this.ataqueEspecial - 30) + 1) + 30;
+        return dano;
     }
 
     @Override
     public int hydroCannon()
     {
-        return 1;
+        System.out.print("Ataque do tipo Agua!   ");
+        System.out.println("Canhão de Agua!");
+        dano = attack.nextInt((this.ataqueEspecial - 60) + 1) + 60;
+        return dano;
     }
 
     @Override
     public int waterPulse()
     {
-        return 1;
+        System.out.print("Ataque do tipo Agua!   ");
+        System.out.println("Pulso de Água!");
+        dano = attack.nextInt((this.ataqueEspecial - 90) + 1) + 90;
+        return dano;
     }
 
     @Override
     public int surf()
     {
-        return 1;
+        System.out.print("Ataque do tipo Agua!   ");
+        System.out.println("Surf! - ULTIMATE");
+        return this.ataqueEspecial;
     }
 
 }

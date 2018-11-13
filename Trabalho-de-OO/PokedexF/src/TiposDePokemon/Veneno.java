@@ -11,6 +11,8 @@ package TiposDePokemon;
  */
 public interface Veneno
 {
+    public int basicAttack();
+    
     public int acid();
 
     public int poisonSting();

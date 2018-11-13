@@ -7,79 +7,148 @@ package Pokemons;
 
 import TiposDePokemon.*;
 import pokedexf.*;
-import Sons.*;
 import java.util.Random;
 
 /**
- * Classe Base de pokemon
- *
  * @author Renan
  */
-public class Caterpie extends Pokemon implements Inseto
+public final class Caterpie extends Pokemon implements Inseto
 {
+    String som = "CaterpieSound";
 
     public Caterpie()
     {
-        super();
-        this.nome = "Caterpie";
-        this.peso = 2.9f;
-        
-        Random s = new Random();
-        int x = s.nextInt(1);
-        if (x == 1)
-        {
-            this.sexo = 'M';
-        }
-        else
-        {
-            this.sexo = 'F';
-        }
-        this.nivel = 0;
-        this.xp = 0;
-  
-        this.hp = 200;
-        this.ataque = 58;
-        this.defesa = 67;
-        this.ataqueEspecial = 40;
-        this.defesaEspecial = 40;
-        this.velocidade = 85;
+        super("Caterpie", 2.9f, 0, 0, 200, 58, 67, 40, 40, 85, "CaterpieSound", 5);
     }
 
     /**
-     * Sobrescrição da Classe Mãe
+     * Apresenta todos os dados do Pokemon
      *
-     * Função: Tocar o Som do Pokemon
+     */
+    @Override
+    public void apresentarPokemon()
+    {
+        super.apresentarPokemon();
+    }
+
+    /**
+     * Sobrescrição da Classe Mãe Função: Tocar o Som do Pokemon
      *
      * @author Mathews
      */
-
+    @Override
     public void emitesom()
     {
-        TocarSom som = new TocarSom();
-        som.play("CaterpieSound");
+        super.emitesom();
     }
 
+    /**
+     * Método atacar() seleciona o ataque de acordo com a possibilidade do mesmo
+     * ocorrer
+     *
+     * @author Mathews
+     * @return
+     */
+    @Override
+    public int atacar()
+    {
+        Random possibilidade = new Random();
+        int prob = possibilidade.nextInt(101);
+
+        switch (defineAtaque1())
+        {
+            case 0:                                                             //Ataque basico
+                return basicAttack();
+            case 1:                                                             //Ataques especiais tipo Grama
+                return bugBuzz();
+            case 2:
+                if (prob <= 75)
+                {
+                    return megahorn();
+                }
+                else
+                {
+                    return basicAttack();
+                }
+            case 3:
+                if (prob <= 50)
+                {
+                    return signalBeam();
+                }
+                else
+                {
+                    return basicAttack();
+                }
+            case 4:
+                if (prob <= 25)
+                {
+                    return xScissor();
+                }
+                else
+                {
+                    return basicAttack();
+                }
+            default:
+                System.out.println("Erro! Array fora dos Limites");
+                return basicAttack();
+        }
+    }
+
+    Random attack = new Random();
+    int dano;
+
+    /**
+     * Sobrescrição da interface de ataque básico
+     *
+     * @author Mathews
+     * @return
+     */
+    @Override
+    public int basicAttack()
+    {
+        System.out.println("Ataque Básico!");
+        dano = attack.nextInt(this.ataque);
+        return dano;
+    }
+
+    /**
+     * Sobrescrição da Classe Inseto
+     *
+     * @author Mathews
+     * @return
+     */
     @Override
     public int bugBuzz()
     {
-        return 1;
+        System.out.print("Ataque do tipo Inseto!   ");
+        System.out.println("Zumbido de Inseto!");
+        dano = attack.nextInt((this.ataqueEspecial - 30));
+        return dano;
     }
 
     @Override
     public int megahorn()
     {
-        return 1;
+        System.out.print("Ataque do tipo Inseto!   ");
+        System.out.println("Mega Chifre!");
+        dano = attack.nextInt((this.ataqueEspecial - 10)+1)+10;
+        return dano;
     }
 
     @Override
     public int signalBeam()
     {
-        return 1;
+        System.out.print("Ataque do tipo Inseto!   ");
+        System.out.println("Raio Sinalizador!");
+        dano = attack.nextInt((this.ataqueEspecial - 20)+1)+20;
+        return dano;
     }
 
     @Override
     public int xScissor()
     {
-        return 1;
+        System.out.print("Ataque do tipo Inseto!   ");
+        System.out.println("Corte X! - ULTIMATE");
+        return this.ataqueEspecial;
     }
 }

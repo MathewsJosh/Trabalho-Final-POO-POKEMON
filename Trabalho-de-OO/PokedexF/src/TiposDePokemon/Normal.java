@@ -11,6 +11,8 @@ package TiposDePokemon;
  */
 public interface Normal
 {
+    public int basicAttack();
+    
     public int cut();
 
     public int furyAttack();

@@ -9,8 +9,10 @@ package TiposDePokemon;
  *
  * @author Mathews
  */
-public interface Voador 
+public interface Voador
 {
+    public int basicAttack();
+
     public int aerialAce();
 
     public int airCutter();

@@ -5,20 +5,22 @@
  */
 package TiposDePokemon;
 
-/**
+/** VAMOS ADICIONAR DEFESAS?
  *
  * @author Mathews
  */
-public interface Agua
+public interface Agua   
 {
-    public int bubble ();
+    public int basicAttack();
 
-    public int dive ();
-    
-    public int hydroCannon ();
-    
+    public int bubble();
+
+    public int dive();
+
+    public int hydroCannon();
+
     public int waterPulse();
-    
+
     public int surf();
 
 }

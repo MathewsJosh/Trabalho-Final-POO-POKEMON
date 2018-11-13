@@ -11,50 +11,105 @@ import java.util.Random;
 import pokedexf.*;
 
 /**
- *
  * @author Mathews
  */
-public class Diglett extends Pokemon implements Terra
+public final class Diglett extends Pokemon implements Terra
 {
+    String som = "DiglettSound";
 
     public Diglett()
     {
-        super();
-        this.nome = "Diglett";
-        this.peso = 0.8f;
-
-        Random s = new Random();
-        int x = s.nextInt(1);
-        if (x == 1)
-        {
-            this.sexo = 'M';
-        }
-        else
-        {
-            this.sexo = 'F';
-        }
-        this.nivel = 0;
-        this.xp = 0;
-
-        this.hp = 130;
-        this.ataque = 103;
-        this.defesa = 49;
-        this.ataqueEspecial = 67;
-        this.defesaEspecial = 85;
-        this.velocidade = 175;
+        super("Diglett", 0.8f, 0, 0, 130, 103, 49, 67, 85, 175, "DiglettSound", 5);
     }
 
     /**
-     * Sobrescrição da Classe Mãe
+     * Apresenta todos os dados do Pokemon
      *
-     * Função: Tocar o Som do Pokemon
+     */
+    @Override
+    public void apresentarPokemon()
+    {
+        super.apresentarPokemon();
+    }
+
+    /**
+     * Sobrescrição da Classe Mãe Função: Tocar o Som do Pokemon
      *
      * @author Mathews
      */
+    @Override
     public void emitesom()
     {
-        TocarSom som = new TocarSom();
-        som.play("OddishSound");
+        super.emitesom();
+    }
+
+    /**
+     * Método atacar() seleciona o ataque de acordo com a possibilidade do mesmo
+     * ocorrer
+     *
+     * @author Mathews
+     * @return
+     */
+    @Override
+    public int atacar()
+    {
+        Random possibilidade = new Random();
+        int prob = possibilidade.nextInt(101);
+
+        switch (defineAtaque1())
+        {
+            case 0:                                                             //Ataque basico
+                return basicAttack();
+            case 1:                                                             //Ataques especiais tipo Grama
+                return sandAttack();
+            case 2:
+                if (prob <= 75)
+                {
+                    return mudSlap();
+                }
+                else
+                {
+                    return basicAttack();
+                }
+            case 3:
+                if (prob <= 50)
+                {
+                    return magnitude();
+                }
+                else
+                {
+                    return basicAttack();
+                }
+            case 4:
+                if (prob <= 25)
+                {
+                    return bulldoze();
+                }
+                else
+                {
+                    return basicAttack();
+                }
+            default:
+                System.out.println("Erro! Array fora dos Limites");
+                return basicAttack();
+        }
+    }
+
+    Random attack = new Random();
+    int dano;
+
+    /**
+     * Sobrescrição da interface de ataque básico
+     *
+     * @author Mathews
+     * @return
+     */
+    @Override
+    public int basicAttack()
+    {
+        System.out.println("Ataque Básico!");
+        dano = attack.nextInt(this.ataque);
+        return dano;
     }
 
     /**
@@ -68,25 +123,36 @@ public class Diglett extends Pokemon implements Terra
     @Override
     public int sandAttack()
     {
-        return 1;
+        System.out.print("Ataque do tipo Terra!   ");
+        System.out.println("Ataque de Areia!");
+        dano = attack.nextInt(this.ataqueEspecial - 52);
+        return dano;
     }
 
     @Override
     public int mudSlap()
     {
-        return 1;
+        System.out.print("Ataque do tipo Terra!   ");
+        System.out.println("Tapa de Lama!");
+        dano = attack.nextInt((this.ataqueEspecial - 15) + 1) + 15;
+        return dano;
     }
 
     @Override
     public int magnitude()
     {
-        return 1;
+        System.out.print("Ataque do tipo Terra!   ");
+        System.out.println("Magnitude!");
+        dano = attack.nextInt((this.ataqueEspecial - 45) + 1) + 45;
+        return dano;
     }
 
     @Override
     public int bulldoze()
     {
-        return 1;
+        System.out.print("Ataque do tipo Terra!   ");
+        System.out.println("Arrasar! - ULTIMATE");
+        return this.ataqueEspecial;
     }
 
 }

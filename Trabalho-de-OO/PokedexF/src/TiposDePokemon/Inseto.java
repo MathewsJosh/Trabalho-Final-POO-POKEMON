@@ -11,11 +11,13 @@ package TiposDePokemon;
  */
 public interface Inseto
 {
+    public int basicAttack();
+
     public int xScissor();
-    
+
     public int bugBuzz();
-    
+
     public int megahorn();
-    
+
     public int signalBeam();
 }
