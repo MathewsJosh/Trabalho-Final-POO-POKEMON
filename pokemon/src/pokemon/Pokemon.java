@@ -10,7 +10,7 @@ package pokemon;
  * Ele Possui os elementos básicos e em comum que todos os objetos pokemons devem possuir
  * @author Renan,Mathew,Julia
  */
-abstract class Pokemon {
+public abstract class Pokemon {
     
     protected String nome;
     protected String genero;

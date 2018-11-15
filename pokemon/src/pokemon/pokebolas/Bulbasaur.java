@@ -27,7 +27,7 @@ public class Bulbasaur extends Pokemon implements Grama, Veneno {
         this.ataqueEspecial = 121;
         this.defesaEspecial = 121;
         this.velocidade = 85;
-        this.pp=20;
+        Bulbasaur.pp=20;
     }
     
     
