@@ -18,7 +18,7 @@ public final class Renan extends Treinador
 {
     public Renan()
     {
-        super("Renan", 19, "Masculino", 2, 4, 1, 50);
+        super("Renan", 20, "Masculino", 2, 4, 1, 50);
     }
 
     /**

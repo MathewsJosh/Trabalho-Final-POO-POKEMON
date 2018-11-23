@@ -32,8 +32,8 @@ public class PokedexF
         b.apresentarPokemon();
         System.out.println(b.atacar());
         */
-        Window janela = new Window (424,290);
-        GameImage plano = new GameImage("Trabalho-de-OO//PokedexF//src//recursos//Sprites//Menu.png");
+        Window janela = new Window (800,600);
+        GameImage plano = new GameImage("Trabalho-de-OO//PokedexF//src//recursos//Sprites//Main Title//MainTitle2.png");
         Keyboard teclado = janela.getKeyboard();
         
         while(true){
@@ -48,7 +48,7 @@ public class PokedexF
         /* O JPlay é uma biblioteca para a criação de interface gráfica -
         https://www.youtube.com/watch?v=ntDvADUoMs8&list=PLnOrFdw5rkTzLcPRa_JKmpMqzNGIlLi3r&index=1 
         disponível nessas video aulas. A ideia aqui é criar um menu com um sprite já criado em uma das versões, mas no NetBeans
-        está dando erro de resolução do display */
+        está dando erro e a imagem ficando Branca */
     }
 
 }
