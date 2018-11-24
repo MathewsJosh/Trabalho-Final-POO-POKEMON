@@ -10,8 +10,9 @@ import TiposDePokemon.*;
 import Sons.*;
 import pokedexf.*;
 import Pokemons.*;
-import javax.swing.JOptionPane;
-import jplay.*;
+import javax.swing.*;
+import java.awt.*;
+import jplay.URL;
 
 /**
  *
@@ -32,23 +33,22 @@ public class PokedexF
         b.apresentarPokemon();
         System.out.println(b.atacar());
         */
-        Window janela = new Window (800,600);
-        GameImage plano = new GameImage("Trabalho-de-OO//PokedexF//src//recursos//Sprites//Main Title//MainTitle2.png");
-        Keyboard teclado = janela.getKeyboard();
+      
+        JFrame telaInicial = new JFrame ();
+        JLabel icone = new JLabel ();
+        Icon imagem = new ImageIcon("src//Sprites//Main Title//MainTitle2.png");
+        icone.setIcon(imagem);
         
-        while(true){
-            plano.draw();
-            janela.update();
-            
-            if(teclado.keyDown(Keyboard.ENTER_KEY)){
-                JOptionPane.showMessageDialog(null,"funcionando");
-            }
-        }
+        telaInicial.setBounds(100, 100, 800, 600);
+        telaInicial.getContentPane().setBackground(Color.red);
+        telaInicial.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        icone.setBounds(100, 100, 800, 600);
+        telaInicial.setLayout(null);
+        telaInicial.add(icone);
         
-        /* O JPlay é uma biblioteca para a criação de interface gráfica -
-        https://www.youtube.com/watch?v=ntDvADUoMs8&list=PLnOrFdw5rkTzLcPRa_JKmpMqzNGIlLi3r&index=1 
-        disponível nessas video aulas. A ideia aqui é criar um menu com um sprite já criado em uma das versões, mas no NetBeans
-        está dando erro e a imagem ficando Branca */
+        telaInicial.setVisible(true);
+        
+        
     }
 
 }
