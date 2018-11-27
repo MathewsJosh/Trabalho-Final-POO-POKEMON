@@ -24,9 +24,6 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
     public Sel_Treinador() {
         initComponents();
         
-         Renan.addActionListener(this);
-         Julia.addActionListener(this);
-         Mathews.addActionListener(this);
         
         
     }
@@ -42,9 +39,9 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
 
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        Julia = new javax.swing.JButton();
-        Mathews = new javax.swing.JButton();
-        Renan = new javax.swing.JButton();
+        JuliaB = new javax.swing.JButton();
+        MathewsB = new javax.swing.JButton();
+        RenanB = new javax.swing.JButton();
         novaBatalha = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         Titulo = new javax.swing.JLabel();
@@ -56,13 +53,29 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
         jPanel1.setBackground(new java.awt.Color(255, 0, 0));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
 
-        Julia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Sprites/Julia.png"))); // NOI18N
-        Julia.setText("Júlia");
+        JuliaB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Sprites/Julia.png"))); // NOI18N
+        JuliaB.setText("Júlia");
+        JuliaB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JuliaBActionPerformed(evt);
+            }
+        });
 
-        Mathews.setText("Mathews");
+        MathewsB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Sprites/Mathews.png"))); // NOI18N
+        MathewsB.setText("Mathews");
+        MathewsB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MathewsBActionPerformed(evt);
+            }
+        });
 
-        Renan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Sprites/Renan.png"))); // NOI18N
-        Renan.setText("Renan");
+        RenanB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Sprites/Renan.png"))); // NOI18N
+        RenanB.setText("Renan");
+        RenanB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RenanBActionPerformed(evt);
+            }
+        });
 
         novaBatalha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Sprites/Slowking.png"))); // NOI18N
         novaBatalha.setText("batalha");
@@ -73,11 +86,11 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Julia)
-                .addGap(42, 42, 42)
-                .addComponent(Mathews)
-                .addGap(27, 27, 27)
-                .addComponent(Renan, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE))
+                .addComponent(JuliaB)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addComponent(MathewsB)
+                .addGap(35, 35, 35)
+                .addComponent(RenanB))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(novaBatalha)
@@ -86,11 +99,11 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(61, 61, 61)
+                .addContainerGap(62, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Julia)
-                    .addComponent(Mathews)
-                    .addComponent(Renan))
+                    .addComponent(JuliaB)
+                    .addComponent(MathewsB)
+                    .addComponent(RenanB))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
                 .addComponent(novaBatalha)
                 .addContainerGap())
@@ -138,6 +151,21 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void RenanBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RenanBActionPerformed
+            Renan r = new Renan();
+            r.apresentaTreinador();
+    }//GEN-LAST:event_RenanBActionPerformed
+
+    private void MathewsBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MathewsBActionPerformed
+            Mathews m = new Mathews();
+            m.apresentaTreinador();
+    }//GEN-LAST:event_MathewsBActionPerformed
+
+    private void JuliaBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JuliaBActionPerformed
+            Julia j = new Julia();
+            j.apresentaTreinador();
+    }//GEN-LAST:event_JuliaBActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -157,9 +185,9 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Julia;
-    private javax.swing.JButton Mathews;
-    private javax.swing.JButton Renan;
+    private javax.swing.JButton JuliaB;
+    private javax.swing.JButton MathewsB;
+    private javax.swing.JButton RenanB;
     private javax.swing.JLabel Titulo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
@@ -169,15 +197,8 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        /*if( == this.Renan){
-            Renan r = new Renan();
-            r.apresentaTreinador();
-        } else if (JButton Renan == this.Mathews){
-            Mathews m = new Mathews();
-            m.apresentaTreinador();
-        } else if (JButton Renan == this.Julia){
-            Julia j = new Julia();
-            j.apresentaTreinador();
-        }*/
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+
 }

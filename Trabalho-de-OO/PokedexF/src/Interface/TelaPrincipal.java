@@ -63,6 +63,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         treinadorPronto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Sprites/Bulbassaur.png"))); // NOI18N
         treinadorPronto.setText("Usar Treinador Pronto?");
+        treinadorPronto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                treinadorProntoActionPerformed(evt);
+            }
+        });
 
         novoTreinador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Sprites/Chamander.png"))); // NOI18N
         novoTreinador.setText("Novo Treinador");
@@ -110,6 +115,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void treinadorProntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_treinadorProntoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_treinadorProntoActionPerformed
 
     /**
      * @param args the command line arguments

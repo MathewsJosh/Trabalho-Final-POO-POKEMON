@@ -133,6 +133,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Usar Treinador Pronto?"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="treinadorProntoActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="novoTreinador">
           <Properties>

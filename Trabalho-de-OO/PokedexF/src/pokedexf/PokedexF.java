@@ -5,7 +5,7 @@
  */
 package pokedexf;
 
-import Interface.TelaPrincipal;
+import Interface.*;
 import Treinadores.*;
 import TiposDePokemon.*;
 import Sons.*;
@@ -32,8 +32,10 @@ public class PokedexF
         System.out.println(b.atacar());
         */
       
-        TelaPrincipal telaPrincipal = new TelaPrincipal();
-        telaPrincipal.setVisible(true);
+        //TelaPrincipal telaPrincipal = new TelaPrincipal();
+        //telaPrincipal.setVisible(true);
+        Sel_Treinador d = new Sel_Treinador();
+        d.setVisible(true);
  
         
     }
