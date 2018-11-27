@@ -12,11 +12,10 @@ import pokedexf.*;
 import Pokemons.*;
 import javax.swing.*;
 import java.awt.*;
-import jplay.URL;
 
 /**
  *
- * @author Mathews
+ * @author Mathews,Renan
  */
 public class PokedexF
 {
@@ -34,20 +33,7 @@ public class PokedexF
         System.out.println(b.atacar());
         */
       
-        JFrame telaInicial = new JFrame ();
-        JLabel icone = new JLabel ();
-        Icon imagem = new ImageIcon("src//Sprites//Main Title//MainTitle2.png");
-        icone.setIcon(imagem);
-        
-        telaInicial.setBounds(100, 100, 800, 600);
-        telaInicial.getContentPane().setBackground(Color.red);
-        telaInicial.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        icone.setBounds(100, 100, 800, 600);
-        telaInicial.setLayout(null);
-        telaInicial.add(icone);
-        
-        telaInicial.setVisible(true);
-        
+ 
         
     }
 
