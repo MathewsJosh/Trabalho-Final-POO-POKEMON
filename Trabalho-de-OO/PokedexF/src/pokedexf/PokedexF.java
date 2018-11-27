@@ -5,13 +5,12 @@
  */
 package pokedexf;
 
+import Interface.TelaPrincipal;
 import Treinadores.*;
 import TiposDePokemon.*;
 import Sons.*;
 import pokedexf.*;
 import Pokemons.*;
-import javax.swing.*;
-import java.awt.*;
 
 /**
  *
@@ -33,6 +32,8 @@ public class PokedexF
         System.out.println(b.atacar());
         */
       
+        TelaPrincipal telaPrincipal = new TelaPrincipal();
+        telaPrincipal.setVisible(true);
  
         
     }
