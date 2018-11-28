@@ -25,11 +25,12 @@ public final class Diglett extends Pokemon implements Terra
     /**
      * Apresenta todos os dados do Pokemon
      *
+     * @return 
      */
     @Override
-    public void apresentarPokemon()
+    public String apresentarPokemon()
     {
-        super.apresentarPokemon();
+        return super.apresentarPokemon();
     }
 
     /**

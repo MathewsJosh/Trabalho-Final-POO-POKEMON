@@ -200,7 +200,7 @@ public class Cria_treinador extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void campo_nomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campo_nomeActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_campo_nomeActionPerformed
 
     /**

@@ -45,7 +45,8 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
         JuliaB = new javax.swing.JButton();
         MathewsB = new javax.swing.JButton();
         RenanB = new javax.swing.JButton();
-        novaBatalha = new javax.swing.JButton();
+        proximoPasso = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jPanel2 = new javax.swing.JPanel();
         Titulo = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
@@ -126,24 +127,28 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
             }
         });
 
-        novaBatalha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Sprites/Slowking.png"))); // NOI18N
-        novaBatalha.setText("batalha");
+        proximoPasso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Sprites/Slowking.png"))); // NOI18N
+        proximoPasso.setText("Proximo");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Julia", "Mathews", "Renan" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(94, 94, 94)
+                .addComponent(proximoPasso)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(JuliaB)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addComponent(MathewsB)
                 .addGap(35, 35, 35)
                 .addComponent(RenanB))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(novaBatalha)
-                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,7 +159,9 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
                     .addComponent(MathewsB)
                     .addComponent(RenanB))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
-                .addComponent(novaBatalha)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(proximoPasso)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -289,13 +296,14 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
     private javax.swing.JButton RenanB;
     private javax.swing.JPanel Superior;
     private javax.swing.JLabel Titulo;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextPane jTextPane1;
-    private javax.swing.JButton novaBatalha;
+    private javax.swing.JButton proximoPasso;
     // End of variables declaration//GEN-END:variables
 
     @Override
