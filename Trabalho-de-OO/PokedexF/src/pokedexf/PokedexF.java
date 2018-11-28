@@ -31,13 +31,8 @@ public class PokedexF
         b.apresentarPokemon();
         System.out.println(b.atacar());
         */
-      
-        //TelaPrincipal telaPrincipal = new TelaPrincipal();
-        //telaPrincipal.setVisible(true);
-        Sel_Treinador d = new Sel_Treinador();
-        d.setVisible(true);
-        //campoDeBatalha b = new campoDeBatalha();
-        //b.setVisible(true);
+        TelaPrincipal telaPrincipal = new TelaPrincipal();
+        telaPrincipal.setVisible(true);
  
         
     }

@@ -71,6 +71,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         novoTreinador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Sprites/Chamander.png"))); // NOI18N
         novoTreinador.setText("Novo Treinador");
+        novoTreinador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                novoTreinadorActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -117,8 +122,18 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void treinadorProntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_treinadorProntoActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        
+        Sel_Treinador d = new Sel_Treinador();
+        d.setVisible(true);
     }//GEN-LAST:event_treinadorProntoActionPerformed
+
+    private void novoTreinadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_novoTreinadorActionPerformed
+        this.setVisible(false);
+        
+        Cria_treinador c = new Cria_treinador();
+        c.setVisible(true);
+    }//GEN-LAST:event_novoTreinadorActionPerformed
 
     /**
      * @param args the command line arguments
