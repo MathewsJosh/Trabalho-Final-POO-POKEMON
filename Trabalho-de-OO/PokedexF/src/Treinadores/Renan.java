@@ -5,6 +5,7 @@
  */
 package Treinadores;
 
+import Interface.Sel_Treinador;
 import TiposDePokemon.*;
 import pokedexf.*;
 import Pokemons.*;
@@ -16,6 +17,10 @@ import java.util.Scanner;
  */
 public final class Renan extends Treinador
 {
+
+    public static void addActionListener(Sel_Treinador aThis) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     public Renan()
     {
         super("Renan", 20, "Masculino", 2, 4, 1, 50);
