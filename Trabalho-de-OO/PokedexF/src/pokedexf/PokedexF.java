@@ -34,10 +34,10 @@ public class PokedexF
       
         //TelaPrincipal telaPrincipal = new TelaPrincipal();
         //telaPrincipal.setVisible(true);
-        //Sel_Treinador d = new Sel_Treinador();
-        //d.setVisible(true);
-        campoDeBatalha b = new campoDeBatalha();
-        b.setVisible(true);
+        Sel_Treinador d = new Sel_Treinador();
+        d.setVisible(true);
+        //campoDeBatalha b = new campoDeBatalha();
+        //b.setVisible(true);
  
         
     }

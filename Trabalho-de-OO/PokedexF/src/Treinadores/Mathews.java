@@ -26,9 +26,10 @@ public final class Mathews extends Treinador
      *
      */
     @Override
-    public void apresentaTreinador()
+    public String apresentaTreinador()
     {
-        super.apresentaTreinador();
+        return super.apresentaTreinador();
+        
     }
 
     /**

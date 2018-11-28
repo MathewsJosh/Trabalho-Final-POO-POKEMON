@@ -23,7 +23,7 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
      */
     public Sel_Treinador() {
         initComponents();
-        
+        jPanel3.setVisible(false);
         
         
     }
@@ -48,6 +48,9 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
         novaBatalha = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         Titulo = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
 
         javax.swing.GroupLayout SuperiorLayout = new javax.swing.GroupLayout(Superior);
         Superior.setLayout(SuperiorLayout);
@@ -177,39 +180,87 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
                 .addContainerGap(59, Short.MAX_VALUE))
         );
 
+        jPanel3.setBackground(new java.awt.Color(255, 0, 0));
+        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+
+        jTextPane1.setEditable(false);
+        jScrollPane1.setViewportView(jTextPane1);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(63, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(30, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(138, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(10, 10, 10)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void RenanBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RenanBActionPerformed
+            jPanel1.setVisible(false);
+            
             Renan r = new Renan();
-            r.apresentaTreinador();
+            jTextPane1.setContentType("text/html");
+            jTextPane1.setText("<html>"+r.apresentaTreinador()+"</html>");
+            jPanel3.setVisible(true);
     }//GEN-LAST:event_RenanBActionPerformed
 
     private void MathewsBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MathewsBActionPerformed
+            jPanel1.setVisible(false);
+            
             Mathews m = new Mathews();
-            m.apresentaTreinador();
+            jTextPane1.setContentType("text/html");
+            jTextPane1.setText("<html>"+m.apresentaTreinador()+"</html>");
+            jPanel3.setVisible(true);
     }//GEN-LAST:event_MathewsBActionPerformed
 
     private void JuliaBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JuliaBActionPerformed
+            jPanel1.setVisible(false);
+            
             Julia j = new Julia();
-            j.apresentaTreinador();
+            jTextPane1.setContentType("text/html");
+            jTextPane1.setText("<html>"+j.apresentaTreinador()+"</html>");
+            jPanel3.setVisible(true);
+            
     }//GEN-LAST:event_JuliaBActionPerformed
 
     /**
@@ -241,6 +292,9 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
     private javax.swing.JDialog jDialog1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextPane jTextPane1;
     private javax.swing.JButton novaBatalha;
     // End of variables declaration//GEN-END:variables
 

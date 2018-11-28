@@ -31,9 +31,9 @@ public final class Renan extends Treinador
      *
      */
     @Override
-    public void apresentaTreinador()
+    public String apresentaTreinador()
     {
-        super.apresentaTreinador();
+        return super.apresentaTreinador();
     }
 
     /**

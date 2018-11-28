@@ -26,9 +26,9 @@ public final class Julia extends Treinador
      *
      */
     @Override
-    public void apresentaTreinador()
+    public String apresentaTreinador()
     {
-        super.apresentaTreinador();
+        return super.apresentaTreinador();
     }
 
     /**
