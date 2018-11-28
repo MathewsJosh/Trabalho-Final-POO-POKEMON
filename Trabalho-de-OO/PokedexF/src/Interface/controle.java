@@ -14,10 +14,6 @@ public class controle {
      public void controleDeTela(){
         TelaPrincipal telaPrincipal = new TelaPrincipal();
         telaPrincipal.setVisible(true);
-        //Sel_Treinador d = new Sel_Treinador();
-        //d.setVisible(true);
-        //campoDeBatalha b = new campoDeBatalha();
-        //b.setVisible(true);
      }
     
 }

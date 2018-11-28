@@ -52,6 +52,7 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
+        Voltar = new javax.swing.JToggleButton();
 
         javax.swing.GroupLayout SuperiorLayout = new javax.swing.GroupLayout(Superior);
         Superior.setLayout(SuperiorLayout);
@@ -203,6 +204,14 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
         jTextPane1.setEditable(false);
         jScrollPane1.setViewportView(jTextPane1);
 
+        Voltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Sprites/BeeDrill.png"))); // NOI18N
+        Voltar.setText("Voltar");
+        Voltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VoltarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -211,13 +220,17 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
                 .addGap(54, 54, 54)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(63, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Voltar))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(52, 52, 52)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Voltar))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -291,6 +304,11 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
             e.setVisible(true);
     }//GEN-LAST:event_proximoPassoActionPerformed
 
+    private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed
+        jPanel3.setVisible(false);
+        jPanel1.setVisible(true);
+    }//GEN-LAST:event_VoltarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -317,6 +335,7 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
     private javax.swing.JButton RenanB;
     private javax.swing.JPanel Superior;
     private javax.swing.JLabel Titulo;
+    private javax.swing.JToggleButton Voltar;
     private javax.swing.JComboBox<String> escolha;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JPanel jPanel1;
