@@ -46,7 +46,7 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
         MathewsB = new javax.swing.JButton();
         RenanB = new javax.swing.JButton();
         proximoPasso = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        escolha = new javax.swing.JComboBox<>();
         jPanel2 = new javax.swing.JPanel();
         Titulo = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
@@ -129,8 +129,18 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
 
         proximoPasso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Sprites/Slowking.png"))); // NOI18N
         proximoPasso.setText("Proximo");
+        proximoPasso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                proximoPassoActionPerformed(evt);
+            }
+        });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Julia", "Mathews", "Renan" }));
+        escolha.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Julia", "Mathews", "Renan" }));
+        escolha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                escolhaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -138,7 +148,7 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(escolha, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(94, 94, 94)
                 .addComponent(proximoPasso)
                 .addContainerGap())
@@ -161,7 +171,7 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(proximoPasso)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(escolha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -270,6 +280,17 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
             
     }//GEN-LAST:event_JuliaBActionPerformed
 
+    private void escolhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_escolhaActionPerformed
+            
+    }//GEN-LAST:event_escolhaActionPerformed
+
+    private void proximoPassoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proximoPassoActionPerformed
+            this.setVisible(false);
+            
+            EscolhaPokemons e = new EscolhaPokemons();
+            e.setVisible(true);
+    }//GEN-LAST:event_proximoPassoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -296,7 +317,7 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
     private javax.swing.JButton RenanB;
     private javax.swing.JPanel Superior;
     private javax.swing.JLabel Titulo;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> escolha;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
