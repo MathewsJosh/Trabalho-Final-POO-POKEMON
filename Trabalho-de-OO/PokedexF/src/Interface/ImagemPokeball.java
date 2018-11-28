@@ -5,17 +5,40 @@
  */
 package Interface;
 
+import java.awt.Graphics;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+
 /**
  *
  * @author Renan
  */
-public class icone extends javax.swing.JPanel {
+public class ImagemPokeball extends javax.swing.JPanel {
 
+    BufferedImage Pokeball;
     /**
-     * Creates new form icone
+     * Creates new form ImagemPokeball
      */
-    public icone() {
+    public ImagemPokeball() {
         initComponents();
+        
+        try {
+            this.Pokeball = ImageIO.read(new File("C:\\Users\\Renan\\Documents\\GitHub\\Trabalho-de-OO\\Trabalho-de-OO\\PokedexF\\src\\Sprites\\Pokemon.png"));
+        } catch (IOException ex) {
+            Logger.getLogger(ImagemPokeball.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    @Override
+    protected void paintComponent(Graphics g){
+        super.paintComponent(g);
+        
+        g.drawImage(Pokeball.getScaledInstance(200,400, 0), 0,0, null);
+        
     }
 
     /**

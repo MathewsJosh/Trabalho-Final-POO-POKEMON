@@ -5,6 +5,9 @@
  */
 package Interface;
 
+import java.awt.Canvas;
+import java.awt.Component;
+
 /**
  *
  * @author Renan
@@ -16,7 +19,12 @@ public class campoDeBatalha extends javax.swing.JFrame {
      */
     public campoDeBatalha() {
         initComponents();
+        
+        Canvas ImagemPokeball = new Canvas();
+        this.Quadro1.add(ImagemPokeball);
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,14 +39,29 @@ public class campoDeBatalha extends javax.swing.JFrame {
         textArea1 = new java.awt.TextArea();
         choice1 = new java.awt.Choice();
         label1 = new java.awt.Label();
+        Quadro1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(255, 0, 0));
         jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         textArea1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
+        label1.setBackground(new java.awt.Color(204, 204, 204));
+        label1.setFont(new java.awt.Font("Segoe UI Symbol", 0, 12)); // NOI18N
         label1.setText("Pokemos");
+
+        javax.swing.GroupLayout Quadro1Layout = new javax.swing.GroupLayout(Quadro1);
+        Quadro1.setLayout(Quadro1Layout);
+        Quadro1Layout.setHorizontalGroup(
+            Quadro1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        Quadro1Layout.setVerticalGroup(
+            Quadro1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 200, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -49,7 +72,8 @@ public class campoDeBatalha extends javax.swing.JFrame {
                 .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(choice1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(237, Short.MAX_VALUE))
+                .addContainerGap(241, Short.MAX_VALUE))
+            .addComponent(Quadro1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -57,7 +81,9 @@ public class campoDeBatalha extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(choice1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 200, Short.MAX_VALUE)
+                .addGap(2, 2, 2)
+                .addComponent(Quadro1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(textArea1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -69,7 +95,10 @@ public class campoDeBatalha extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -111,6 +140,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Quadro1;
     private java.awt.Choice choice1;
     private javax.swing.JPanel jPanel1;
     private java.awt.Label label1;
