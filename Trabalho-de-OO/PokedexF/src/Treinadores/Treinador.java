@@ -126,17 +126,17 @@ public class Treinador
     /**
      * Exibe os todos os dados do Treinador
      *
+     * @return 
      */
-    public void apresentaTreinador()
+    public String apresentaTreinador()
     {
-        System.out.println("\nTreinador: " + getNome());
-        System.out.println("Idade: " + getIdade());
-        System.out.println("Gênero: " + getGenero());
-
-        System.out.println("Insignias: " + getInsignias());
-        System.out.println("Número de Pokemons: " + getNumPokemons());
-        System.out.println("Nivel do Treinador: " + getNivelAtual());
-        System.out.println("XP Atual: " + getXpT() + "\n");
+        return "<br> Treinador: " + getNome()+
+        "<br> Idade: " + getIdade() +
+        "<br> Gênero: " + getGenero()+
+        "<br> Insignias: " + getInsignias() +
+        "<br>Número de Pokemons: " + getNumPokemons()+
+        "<br>Nivel do Treinador: " + getNivelAtual()+
+        "<br> XP Atual: " + getXpT() + "\n";
 
     }
 

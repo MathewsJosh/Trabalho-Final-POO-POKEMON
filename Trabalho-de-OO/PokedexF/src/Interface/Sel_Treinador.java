@@ -23,7 +23,7 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
      */
     public Sel_Treinador() {
         initComponents();
-        
+        jPanel3.setVisible(false);
         
         
     }
@@ -45,9 +45,14 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
         JuliaB = new javax.swing.JButton();
         MathewsB = new javax.swing.JButton();
         RenanB = new javax.swing.JButton();
-        novaBatalha = new javax.swing.JButton();
+        proximoPasso = new javax.swing.JButton();
+        escolha = new javax.swing.JComboBox<>();
         jPanel2 = new javax.swing.JPanel();
         Titulo = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
+        Voltar = new javax.swing.JToggleButton();
 
         javax.swing.GroupLayout SuperiorLayout = new javax.swing.GroupLayout(Superior);
         Superior.setLayout(SuperiorLayout);
@@ -123,24 +128,38 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
             }
         });
 
-        novaBatalha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Sprites/Slowking.png"))); // NOI18N
-        novaBatalha.setText("batalha");
+        proximoPasso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Sprites/Slowking.png"))); // NOI18N
+        proximoPasso.setText("Proximo");
+        proximoPasso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                proximoPassoActionPerformed(evt);
+            }
+        });
+
+        escolha.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Julia", "Mathews", "Renan" }));
+        escolha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                escolhaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(escolha, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(94, 94, 94)
+                .addComponent(proximoPasso)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(JuliaB)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addComponent(MathewsB)
                 .addGap(35, 35, 35)
                 .addComponent(RenanB))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(novaBatalha)
-                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -151,7 +170,9 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
                     .addComponent(MathewsB)
                     .addComponent(RenanB))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
-                .addComponent(novaBatalha)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(proximoPasso)
+                    .addComponent(escolha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -177,40 +198,116 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
                 .addContainerGap(59, Short.MAX_VALUE))
         );
 
+        jPanel3.setBackground(new java.awt.Color(255, 0, 0));
+        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+
+        jTextPane1.setEditable(false);
+        jScrollPane1.setViewportView(jTextPane1);
+
+        Voltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Sprites/BeeDrill.png"))); // NOI18N
+        Voltar.setText("Voltar");
+        Voltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VoltarActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(63, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Voltar))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Voltar))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(138, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(10, 10, 10)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void RenanBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RenanBActionPerformed
+            jPanel1.setVisible(false);
+            
             Renan r = new Renan();
-            r.apresentaTreinador();
+            jTextPane1.setContentType("text/html");
+            jTextPane1.setText("<html>"+r.apresentaTreinador()+"</html>");
+            jPanel3.setVisible(true);
     }//GEN-LAST:event_RenanBActionPerformed
 
     private void MathewsBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MathewsBActionPerformed
+            jPanel1.setVisible(false);
+            
             Mathews m = new Mathews();
-            m.apresentaTreinador();
+            jTextPane1.setContentType("text/html");
+            jTextPane1.setText("<html>"+m.apresentaTreinador()+"</html>");
+            jPanel3.setVisible(true);
     }//GEN-LAST:event_MathewsBActionPerformed
 
     private void JuliaBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JuliaBActionPerformed
+            jPanel1.setVisible(false);
+            
             Julia j = new Julia();
-            j.apresentaTreinador();
+            jTextPane1.setContentType("text/html");
+            jTextPane1.setText("<html>"+j.apresentaTreinador()+"</html>");
+            jPanel3.setVisible(true);
+            
     }//GEN-LAST:event_JuliaBActionPerformed
+
+    private void escolhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_escolhaActionPerformed
+            
+    }//GEN-LAST:event_escolhaActionPerformed
+
+    private void proximoPassoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proximoPassoActionPerformed
+            this.setVisible(false);
+            
+            EscolhaPokemons e = new EscolhaPokemons();
+            e.setVisible(true);
+    }//GEN-LAST:event_proximoPassoActionPerformed
+
+    private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed
+        jPanel3.setVisible(false);
+        jPanel1.setVisible(true);
+    }//GEN-LAST:event_VoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -238,10 +335,15 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
     private javax.swing.JButton RenanB;
     private javax.swing.JPanel Superior;
     private javax.swing.JLabel Titulo;
+    private javax.swing.JToggleButton Voltar;
+    private javax.swing.JComboBox<String> escolha;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JButton novaBatalha;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JButton proximoPasso;
     // End of variables declaration//GEN-END:variables
 
     @Override

@@ -26,11 +26,13 @@ public final class Charmander extends Pokemon implements Fogo
     /**
      * Apresenta todos os dados do Pokemon
      *
+     * @return 
      */
     @Override
-    public void apresentarPokemon()
+    public String apresentarPokemon()
     {
-        super.apresentarPokemon();
+        return super.apresentarPokemon();
+        
     }
 
     /**

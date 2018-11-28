@@ -25,11 +25,12 @@ public final class Bulbassauro extends Pokemon implements Grama, Veneno
     /**
      * Apresenta todos os dados do Pokemon
      *
+     * @return 
      */
     @Override
-    public void apresentarPokemon()
+    public String apresentarPokemon()
     {
-        super.apresentarPokemon();
+        return super.apresentarPokemon();
     }
 
     /**

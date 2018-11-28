@@ -24,11 +24,12 @@ public final class Caterpie extends Pokemon implements Inseto
     /**
      * Apresenta todos os dados do Pokemon
      *
+     * @return 
      */
     @Override
-    public void apresentarPokemon()
+    public String apresentarPokemon()
     {
-        super.apresentarPokemon();
+        return super.apresentarPokemon();
     }
 
     /**

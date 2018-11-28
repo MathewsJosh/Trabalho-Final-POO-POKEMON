@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Interface;
-
+    
 
 /**
  *
@@ -12,6 +12,7 @@ package Interface;
  */
 public class Cria_treinador extends javax.swing.JFrame {
 
+    String Name;
     /**
      * Creates new form Cria_treinador
      */
@@ -82,7 +83,12 @@ public class Cria_treinador extends javax.swing.JFrame {
         xp.setText("XP:");
 
         Batalha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Sprites/Absol.png"))); // NOI18N
-        Batalha.setText("batalha");
+        Batalha.setText("Proximo");
+        Batalha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BatalhaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -200,8 +206,15 @@ public class Cria_treinador extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void campo_nomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campo_nomeActionPerformed
-        // TODO add your handling code here:
+            
     }//GEN-LAST:event_campo_nomeActionPerformed
+
+    private void BatalhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BatalhaActionPerformed
+            this.setVisible(false);
+            
+            EscolhaPokemons e = new EscolhaPokemons();
+            e.setVisible(true);
+    }//GEN-LAST:event_BatalhaActionPerformed
 
     /**
      * @param args the command line arguments
