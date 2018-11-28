@@ -65,22 +65,24 @@ public abstract class Pokemon
     /**
      * Apresenta todos os dados do Pokemon
      *
+     * @return 
      */
-    public void apresentarPokemon()
+    public String apresentarPokemon()
     {
-        System.out.println("========Informações do Pokemon========");
-        System.out.println("\nNome: " + getNome());
-        System.out.println("Sexo: " + getSexo());
-        System.out.println("Peso: " + getPeso());
-        System.out.println("Nível: " + getNivel());
-        System.out.println("Xp Atual: " + getXp());
-        System.out.println("\nHP: " + getHp());
-        System.out.println("Ataque: " + getAtaque());
-        System.out.println("Defesa: " + getDefesa());
-        System.out.println("Ataque Especial: " + getAtaqueEspecial());
-        System.out.println("Defesa Especial: " + getDefesaEspecial());
-        System.out.println("Velocidade: " + getVelocidade() + "\n");
-        emitesom();                                                          //Acrescentar botão para emitir som ou deixar automatico?????
+        emitesom();  
+        return "========Informações do Pokemon========" +
+        "<br> Nome: " + getNome() +
+        "<br> Sexo: " + getSexo() +
+        "<br> Peso: " + getPeso() +
+        "<br> Nível: " + getNivel() +
+        "<br> Xp Atual: " + getXp() +
+        "<br> HP: " + getHp() +
+        "<br> Ataque: " + getAtaque() +
+        "<br> Defesa: " + getDefesa() +
+        "<br> Ataque Especial: " + getAtaqueEspecial() +
+        "<br> Defesa Especial: " + getDefesaEspecial() + 
+        "<br> Velocidade: " + getVelocidade() + "\n";
+                                              
     }
 
     /**
