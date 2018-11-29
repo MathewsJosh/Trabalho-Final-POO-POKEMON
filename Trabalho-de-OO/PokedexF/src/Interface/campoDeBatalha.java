@@ -20,8 +20,9 @@ public class campoDeBatalha extends javax.swing.JFrame {
     public campoDeBatalha() {
         initComponents();
         
-        Canvas ImagemPokeball = new Canvas();
-        this.Quadro1.add(ImagemPokeball);
+       /* Canvas ImagemPokeball = new Canvas();
+        this.Quadro1.add(ImagemPokeball);*/
+       // Implementar Uma Imagem para o fundo do campo de batalha, eu pensei em uma das Pokebolas que esá na pasta Sprite
     }
     
     
@@ -130,7 +131,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void fecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fecharActionPerformed
-        //Fechar o Programa.
+        System.exit(0);
     }//GEN-LAST:event_fecharActionPerformed
 
     private void atacarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atacarActionPerformed
