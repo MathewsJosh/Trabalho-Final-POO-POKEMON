@@ -5,6 +5,8 @@
  */
 package Interface;
 
+import java.awt.Canvas;
+
 /**
  *
  * @author Renan
@@ -16,6 +18,10 @@ public class EscolhaPokemons extends javax.swing.JFrame {
      */
     public EscolhaPokemons() {
         initComponents();
+        
+        Canvas ImagemPokeball = new Canvas();
+        this.jPanel1.add(ImagemPokeball);
+        ImagemPokeball.setVisible(true);
     }
 
     /**
