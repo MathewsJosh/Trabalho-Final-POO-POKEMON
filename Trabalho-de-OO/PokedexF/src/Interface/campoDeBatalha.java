@@ -171,7 +171,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     b.apresentarPokemon();
                     while(b.getHp() >= 0){
                         dano_meu = b.atacar();
-                        System.out.println("HP: "+c.getHp());
+                        System.out.println("HP: "+b.getHp());
                         
                       //  sofreDano(dano);
                     }
