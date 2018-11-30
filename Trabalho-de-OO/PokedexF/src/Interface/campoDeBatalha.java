@@ -6,6 +6,7 @@
 package Interface;
 
 import static Interface.Sel_Treinador.control;
+import Pokemons.*;
 import Treinadores.*;
 import java.awt.Canvas;
 import java.awt.Component;
@@ -140,21 +141,59 @@ public class campoDeBatalha extends javax.swing.JFrame {
                 j.apresentaTreinador();
                 
                 j.setpokemons();
-                j.pokes;
+                
+                Bulbassauro b = new Bulbassauro();
+                Caterpie ca = new Caterpie();
+                Charmander cha = new Charmander();
+                
+                if(b.getHp() <= 0)
+                {
+                    b.atacar();
+                } else if (ca.getHp() <= 0)
+                {
+                    ca.atacar();
+                } else if (cha.getHp() <= 0){
+                    ca.atacar();
+                }
+    
                 
                 
             case 1:
                 Mathews m = new Mathews();
                 m.apresentaTreinador();
                 
-                m.setpokemons();
+                Diglett d = new Diglett();
+                Magikarp ma = new Magikarp();
+                Oddish od = new Oddish();
+                
+                if(d.getHp() <= 0)
+                {
+                    d.atacar();
+                } else if (ma.getHp() <= 0)
+                {
+                    ma.atacar();
+                } else if (od.getHp() <= 0){
+                    od.atacar();
+                }
+                
                 
             case 2:
                 Renan r = new Renan();
                 r.apresentaTreinador();
                 
-                r.setpokemons();
+                Pidgey pid = new Pidgey();
+                Pikachu pik = new Pikachu();
+                Psyduck psy = new Psyduck();
                 
+                if(pid.getHp() <= 0)
+                {
+                    pid.atacar();
+                } else if (pik.getHp() <= 0)
+                {
+                    pik.atacar();
+                } else if (psy.getHp() <= 0){
+                    psy.atacar();
+                }
             default:
         }
     }//GEN-LAST:event_atacarActionPerformed

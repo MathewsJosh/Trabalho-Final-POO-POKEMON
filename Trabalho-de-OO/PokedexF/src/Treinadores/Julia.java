@@ -60,12 +60,7 @@ public final class Julia extends Treinador
     public void setpokemons()
     {
         super.setpokemons();
-        Bulbassauro b = new Bulbassauro();
-        Caterpie ca = new Caterpie();
-        Charmander cha = new Charmander();
-        pokes.add(b);
-        pokes.add(ca);
-        pokes.add(cha);
+    
     }
     
    

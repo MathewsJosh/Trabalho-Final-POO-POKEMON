@@ -47,12 +47,8 @@ public final class Mathews extends Treinador
     public void setpokemons()
     {
         super.setpokemons();
-        Diglett d = new Diglett();
-        Magikarp ma = new Magikarp();
-        Oddish od = new Oddish();
-        pokes.add(d);
-        pokes.add(ma);
-        pokes.add(od);
+      
+    
     }
 
     /**

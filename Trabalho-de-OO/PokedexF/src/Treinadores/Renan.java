@@ -68,9 +68,7 @@ public final class Renan extends Treinador
         Pidgey pid = new Pidgey();
         Pikachu pik = new Pikachu();
         Psyduck psy = new Psyduck();
-        pokes.add(pid);
-        pokes.add(pik);
-        pokes.add(psy);
+      
     }
 
     /**
