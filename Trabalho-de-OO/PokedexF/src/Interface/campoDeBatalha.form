@@ -33,7 +33,7 @@
           <Component id="jPanel1" max="32767" attributes="0"/>
           <Group type="102" attributes="0">
               <Component id="atacar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Component id="Iniciar" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
               <Component id="fechar" min="-2" max="-2" attributes="0"/>
