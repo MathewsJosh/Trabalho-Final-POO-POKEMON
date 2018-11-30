@@ -8,6 +8,7 @@ package Treinadores;
 import TiposDePokemon.*;
 import pokedexf.*;
 import Pokemons.*;
+import java.util.Collection;
 import java.util.Scanner;
 
 /**
@@ -24,6 +25,7 @@ public class Treinador
     protected int numPokemons;
     protected int nivel;
     protected int xpT;
+    protected Collection pokes;
 
     /**
      * Construtor de sobrecarga padrão para classe Treinador
@@ -183,6 +185,12 @@ public class Treinador
             System.out.println("=>Level Atual: " + getNivelAtual());
         }
 
+    }
+    
+    
+    public void setpokemons()
+    {
+    
     }
 
     public String getNome()

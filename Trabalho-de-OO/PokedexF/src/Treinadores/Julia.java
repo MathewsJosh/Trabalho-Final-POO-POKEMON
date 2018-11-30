@@ -8,9 +8,12 @@ package Treinadores;
 import TiposDePokemon.*;
 import pokedexf.*;
 import Pokemons.*;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Scanner;
 
-/** Classe Julia é um Treinador com todos os seus dados definidos
+/**
+ * Classe Julia é um Treinador com todos os seus dados definidos
  *
  * @author Mathews
  */
@@ -49,9 +52,21 @@ public final class Julia extends Treinador
      * @param n
      */
     @Override
-    public void subirDeNivel(int n)                     
+    public void subirDeNivel(int n)
     {
         super.subirDeNivel(n);
+    }
+
+    @Override
+    public void setpokemons()
+    {
+        super.setpokemons();
+        Bulbassauro b = new Bulbassauro();
+        Caterpie ca = new Caterpie();
+        Charmander cha = new Charmander();
+        pokes.add(b);
+        pokes.add(ca);
+        pokes.add(cha);
     }
 
     /**
@@ -62,7 +77,7 @@ public final class Julia extends Treinador
      * @param xp
      */
     @Override
-    public void ganharXpT(int xp)                                           
+    public void ganharXpT(int xp)
     {
         super.ganharXpT(xp);
     }

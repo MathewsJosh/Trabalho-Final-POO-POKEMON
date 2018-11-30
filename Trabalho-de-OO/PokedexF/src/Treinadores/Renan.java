@@ -11,16 +11,19 @@ import pokedexf.*;
 import Pokemons.*;
 import java.util.Scanner;
 
-/** Classe Renan é um Treinador com todos os seus dados definidos
+/**
+ * Classe Renan é um Treinador com todos os seus dados definidos
  *
  * @author Mathews
  */
 public final class Renan extends Treinador
 {
 
-    public static void addActionListener(Sel_Treinador aThis) {
+    public static void addActionListener(Sel_Treinador aThis)
+    {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
     public Renan()
     {
         super("Renan", 20, "Masculino", 2, 4, 1, 50);
@@ -47,6 +50,18 @@ public final class Renan extends Treinador
         super.GanharPokemons(x);
     }
 
+    @Override
+    public void setpokemons()
+    {
+        super.setpokemons();
+        Pidgey pid = new Pidgey();
+        Pikachu pik = new Pikachu();
+        Psyduck psy = new Psyduck();
+        pokes.add(pid);
+        pokes.add(pik);
+        pokes.add(psy);
+    }
+
     /**
      * A cada 100 de xp, sobe de nivel. Essa classe funciona em conjunto com a
      * ganharXpT
@@ -54,7 +69,7 @@ public final class Renan extends Treinador
      * @param n
      */
     @Override
-    public void subirDeNivel(int n)                     
+    public void subirDeNivel(int n)
     {
         super.subirDeNivel(n);
     }
@@ -67,7 +82,7 @@ public final class Renan extends Treinador
      * @param xp
      */
     @Override
-    public void ganharXpT(int xp)                                           
+    public void ganharXpT(int xp)
     {
         super.ganharXpT(xp);
     }
