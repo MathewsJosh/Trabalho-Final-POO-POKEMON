@@ -171,6 +171,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     b.apresentarPokemon();
                     while(b.getHp() >= 0){
                         dano_meu = b.atacar();
+                        System.out.println("HP: "+c.getHp());
                         
                       //  sofreDano(dano);
                     }
@@ -181,6 +182,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     ca.apresentarPokemon();
                     while(ca.getHp() >= 0){
                         dano_meu = ca.atacar();
+                        System.out.println("HP: "+ca.getHp());
                     }
                 } else if (cha.getHp() >= 0){
                     jTextPane1.setContentType("text/html");
@@ -188,6 +190,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     cha.apresentarPokemon();
                     while(cha.getHp() >= 0){
                         dano_meu = cha.atacar();
+                        System.out.println("HP: "+cha.getHp());
                     }
                 } else {
                 jTextPane1.setContentType("text/html");
@@ -209,6 +212,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     d.apresentarPokemon();
                     while(d.getHp() >= 0){    
                         dano_meu = d.atacar();
+                        System.out.println("HP: "+d.getHp());
                     }
                 } else if (ma.getHp() >= 0)
                 {
@@ -217,6 +221,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     ma.apresentarPokemon();
                     while(ma.getHp() >= 0){
                         dano_meu = ma.atacar();
+                        System.out.println("HP: "+ma.getHp());
                     }
                 } else if (od.getHp() >= 0){
                     jTextPane1.setContentType("text/html");
@@ -224,6 +229,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     od.apresentarPokemon();
                     while(od.getHp() >= 0){
                         dano_meu = od.atacar();
+                        System.out.println("HP: "+od.getHp());
                     }
                 }
                 else {
