@@ -128,7 +128,7 @@ public final class Bulbassauro extends Pokemon implements Grama, Veneno
     @Override
     public int basicAttack()
     {
-        System.out.println("Ataque Básico!");
+        //System.out.println("Ataque Básico!");
         dano = attack.nextInt(this.ataque);
         return dano;
     }
