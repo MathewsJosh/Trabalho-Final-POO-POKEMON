@@ -8,6 +8,7 @@ package Treinadores;
 import TiposDePokemon.*;
 import pokedexf.*;
 import Pokemons.*;
+import java.util.Collection;
 import java.util.Scanner;
 
 /**
@@ -24,6 +25,7 @@ public class Treinador
     protected int numPokemons;
     protected int nivel;
     protected int xpT;
+    protected Collection pokes;
 
     /**
      * Construtor de sobrecarga padrão para classe Treinador
@@ -46,6 +48,7 @@ public class Treinador
         this.numPokemons = num;
         this.nivel = niv;
         this.xpT = xptreinador;
+        
 
     }
 
@@ -115,6 +118,10 @@ public class Treinador
         }
     }
 
+    void setpokemons() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     private static class erro extends Exception
     {
         private erro(String message)
@@ -149,6 +156,7 @@ public class Treinador
     {
         this.numPokemons = this.numPokemons + x;
     }
+    
 
     /**
      * A cada 100 de xp, sobe de nivel. Essa classe funciona em conjunto com a

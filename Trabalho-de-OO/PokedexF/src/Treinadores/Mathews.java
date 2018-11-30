@@ -42,6 +42,18 @@ public final class Mathews extends Treinador
     {
         super.GanharPokemons(x);
     }
+    
+     @Override
+    public void setpokemons()
+    {
+        super.setpokemons();
+        Diglett d = new Diglett();
+        Magikarp ma = new Magikarp();
+        Oddish od = new Oddish();
+        pokes.add(d);
+        pokes.add(ma);
+        pokes.add(od);
+    }
 
     /**
      * A cada 100 de xp, sobe de nivel. Essa classe funciona em conjunto com a
