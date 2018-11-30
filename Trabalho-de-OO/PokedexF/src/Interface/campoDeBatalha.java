@@ -18,14 +18,15 @@ import pokedexf.Pokemon;
  */
 public class campoDeBatalha extends javax.swing.JFrame {
     
-    int dano_meu;
-    int dano_ini;
+    static int dano_meu;
+    static int dano_ini;
     
     /**
      * Creates new form campoDeBatalha
      */
     public campoDeBatalha() {
         initComponents();
+       
         
        /* Canvas ImagemPokeball = new Canvas();
         this.Quadro1.add(ImagemPokeball);*/
@@ -40,6 +41,41 @@ public class campoDeBatalha extends javax.swing.JFrame {
             return "<br> Treinador: " + t.getNome()+ " Ganhou!";
     }
     
+    public void InimigoPublico(){
+        
+        Treinador adversario = new Treinador("Luiz", 18, "M", 0, 3, 0, 0);
+        Squirtle sq = new Squirtle();
+        Vulpix vul = new Vulpix();
+        Zubat zub = new Zubat();
+         if (sq.getHp() <= 0)
+        {
+            jTextPane1.setContentType("text/html");
+            jTextPane1.setText("<html>" + sq.apresentarPokemon() + "</html>");
+            sq.apresentarPokemon();
+            while(sq.getHp() <= 0){
+                dano_ini = sq.atacar();
+            }
+        }
+        else if (vul.getHp() <= 0)
+        {
+            jTextPane1.setContentType("text/html");
+            jTextPane1.setText("<html>" + vul.apresentarPokemon() + "</html>");
+            vul.apresentarPokemon();
+            while(vul.getHp() <= 0){
+                dano_ini = vul.atacar();
+            }
+        }
+        else if (zub.getHp() <= 0)
+        {
+            jTextPane1.setContentType("text/html");
+            jTextPane1.setText("<html>" + zub.apresentarPokemon() + "</html>"); 
+            zub.apresentarPokemon();
+            while(zub.getHp() <= 0){
+                dano_ini = zub.atacar();
+            }
+        }
+
+    }
     
 
     /**
@@ -162,6 +198,8 @@ public class campoDeBatalha extends javax.swing.JFrame {
                 Bulbassauro b = new Bulbassauro();
                 Caterpie ca = new Caterpie();
                 Charmander cha = new Charmander();
+                
+                InimigoPublico();
                 
                 if(b.getHp() >= 0)
                 {
