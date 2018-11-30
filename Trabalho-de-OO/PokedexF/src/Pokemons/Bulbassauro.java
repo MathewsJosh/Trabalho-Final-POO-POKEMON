@@ -206,4 +206,5 @@ public final class Bulbassauro extends Pokemon implements Grama, Veneno
         System.out.println("Fumaça venenosa! - ULTIMATE");
         return this.ataqueEspecial;
     }
+
 }

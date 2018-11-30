@@ -17,7 +17,10 @@ import pokedexf.Pokemon;
  * @author Renan
  */
 public class campoDeBatalha extends javax.swing.JFrame {
-
+    
+    int dano_meu;
+    int dano_ini;
+    
     /**
      * Creates new form campoDeBatalha
      */
@@ -166,21 +169,26 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+b.apresentarPokemon()+"</html>");
                     b.apresentarPokemon();
-                    //while()
+                    while(b.getHp() >= 0){
                         b.atacar();
+                        
+                      //  sofreDano(dano);
+                    }
                 } else if (ca.getHp() >= 0)
                 {
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+ca.apresentarPokemon()+"</html>");
                     ca.apresentarPokemon();
-                    //while()
+                    while(ca.getHp() >= 0){
                         ca.atacar();
+                    }
                 } else if (cha.getHp() >= 0){
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+cha.apresentarPokemon()+"</html>");
                     cha.apresentarPokemon();
-                    //while()
+                    while(cha.getHp() >= 0){
                         cha.atacar();
+                    }
                 } else {
                 jTextPane1.setContentType("text/html");
                 jTextPane1.setText("<html>"+ganharOuPerder(j, ca, cha, b)+"</html>");
@@ -199,21 +207,24 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+d.apresentarPokemon()+"</html>");
                     d.apresentarPokemon();
-                    //while()    
+                    while(d.getHp() >= 0){    
                         d.atacar();
+                    }
                 } else if (ma.getHp() >= 0)
                 {
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+ma.apresentarPokemon()+"</html>");
                     ma.apresentarPokemon();
-                    //while()
+                    while(ma.getHp() >= 0){
                         ma.atacar();
+                    }
                 } else if (od.getHp() >= 0){
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+od.apresentarPokemon()+"</html>");
                     od.apresentarPokemon();
-                    //while()
+                    while(od.getHp() >= 0){
                         od.atacar();
+                    }
                 }
                 else {
                 jTextPane1.setContentType("text/html");
@@ -232,22 +243,25 @@ public class campoDeBatalha extends javax.swing.JFrame {
                 {
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+pid.apresentarPokemon()+"</html>");
-                    //while()
+                    while(pid.getHp() >= 0){
                         pid.atacar();
+                    }
                 } else if (pik.getHp() >= 0)
                 {
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+pik.apresentarPokemon()+"</html>");
                     pik.apresentarPokemon();
-                    //while()
+                    while(pik.getHp() >= 0){
                         pik.atacar();
+                    }
                 } else if (psy.getHp() >= 0){
                     //jTextPane1.setContentType("text/html");
                     //jTextPane1.setText("<html>"+m.apresentaTreinador()+"</html>");
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+psy.apresentarPokemon()+"</html>");
-                    //while()
+                    while(psy.getHp() >= 0){
                         psy.atacar();
+                    }
                 }
                 else {
                 jTextPane1.setContentType("text/html");
