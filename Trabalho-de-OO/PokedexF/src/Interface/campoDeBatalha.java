@@ -10,6 +10,7 @@ import Pokemons.*;
 import Treinadores.*;
 import java.awt.Canvas;
 import java.awt.Component;
+import pokedexf.Pokemon;
 
 /**
  *
@@ -26,6 +27,14 @@ public class campoDeBatalha extends javax.swing.JFrame {
        /* Canvas ImagemPokeball = new Canvas();
         this.Quadro1.add(ImagemPokeball);*/
        // Implementar Uma Imagem para o fundo do campo de batalha, eu pensei em uma das Pokebolas que esá na pasta Sprite
+    }
+    
+    public String ganharOuPerder(Treinador t, Pokemon p1,Pokemon p2,Pokemon p3){
+        if (p1.getHp() <= 0 && p2.getHp() <= 0 && p3.getHp() <= 0)
+        {
+            return "<br> Treinador: " + t.getNome()+ "Perdeu!";
+        } else
+            return "<br> Treinador: " + t.getNome()+ "Ganhou!";
     }
     
     
@@ -152,6 +161,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                 
                 if(b.getHp() <= 0)
                 {
+                    //jScrollPane2.setVisible(true);
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+b.apresentarPokemon()+"</html>");
                     b.apresentarPokemon();
@@ -167,9 +177,10 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     jTextPane1.setText("<html>"+cha.apresentarPokemon()+"</html>");
                     cha.apresentarPokemon();
                     cha.atacar();
+                } else {
+                jTextPane1.setContentType("text/html");
+                jTextPane1.setText("<html>"+ganharOuPerder(j, ca, cha, b)+"</html>");
                 }
-    
-                
                 
             case 1:
                 Mathews m = new Mathews();
@@ -197,7 +208,10 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     od.apresentarPokemon();
                     od.atacar();
                 }
-                
+                else {
+                jTextPane1.setContentType("text/html");
+                jTextPane1.setText("<html>"+ganharOuPerder(m, ma, od, d)+"</html>");
+                }
                 
             case 2:
                 Renan r = new Renan();
@@ -224,6 +238,10 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+psy.apresentarPokemon()+"</html>");
                     psy.atacar();
+                }
+                else {
+                jTextPane1.setContentType("text/html");
+                jTextPane1.setText("<html>"+ganharOuPerder(r, psy, pik, pid)+"</html>");
                 }
             default:
         }
