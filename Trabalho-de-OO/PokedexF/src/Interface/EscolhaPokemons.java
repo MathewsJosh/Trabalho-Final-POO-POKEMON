@@ -5,6 +5,8 @@
  */
 package Interface;
 
+import java.awt.Canvas;
+
 /**
  *
  * @author Renan
@@ -16,6 +18,10 @@ public class EscolhaPokemons extends javax.swing.JFrame {
      */
     public EscolhaPokemons() {
         initComponents();
+        
+        Canvas ImagemPokeball = new Canvas();
+        this.jPanel1.add(ImagemPokeball);
+        ImagemPokeball.setVisible(true);
     }
 
     /**
@@ -69,6 +75,11 @@ public class EscolhaPokemons extends javax.swing.JFrame {
         jRadioButton11.setText("Zubat");
 
         ok.setText("Ok");
+        ok.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                okActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -147,6 +158,13 @@ public class EscolhaPokemons extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void okActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okActionPerformed
+            this.setVisible(false);
+            
+            campoDeBatalha batalha = new campoDeBatalha();
+            batalha.setVisible(true);
+    }//GEN-LAST:event_okActionPerformed
 
     /**
      * @param args the command line arguments

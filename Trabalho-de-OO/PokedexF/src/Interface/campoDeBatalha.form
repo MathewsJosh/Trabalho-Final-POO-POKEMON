@@ -23,7 +23,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+          <Component id="jPanel1" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Component id="atacar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="172" max="32767" attributes="0"/>
+              <Component id="fechar" min="-2" max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -32,6 +37,10 @@
               <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
               <Component id="jPanel1" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="fechar" min="-2" max="-2" attributes="0"/>
+                  <Component id="atacar" min="-2" max="-2" attributes="0"/>
+              </Group>
           </Group>
       </Group>
     </DimensionLayout>
@@ -55,7 +64,7 @@
                   <Component id="label1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="choice1" min="-2" pref="96" max="-2" attributes="0"/>
-                  <EmptySpace pref="241" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
               <Component id="Quadro1" alignment="0" max="32767" attributes="0"/>
           </Group>
@@ -113,5 +122,27 @@
         </Container>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JButton" name="fechar">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/Sprites/Blastoise.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Encerrar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fecharActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="atacar">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/Sprites/586-spring.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Ataque"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="atacarActionPerformed"/>
+      </Events>
+    </Component>
   </SubComponents>
 </Form>
