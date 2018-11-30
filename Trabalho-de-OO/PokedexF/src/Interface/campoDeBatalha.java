@@ -39,19 +39,21 @@ public class campoDeBatalha extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        textField1 = new java.awt.TextField();
         jPanel1 = new javax.swing.JPanel();
-        textArea1 = new java.awt.TextArea();
         label1 = new java.awt.Label();
         Quadro1 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
         fechar = new javax.swing.JButton();
         atacar = new javax.swing.JButton();
+
+        textField1.setText("textField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 0, 0));
         jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        textArea1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
         label1.setBackground(new java.awt.Color(204, 204, 204));
         label1.setFont(new java.awt.Font("Segoe UI Symbol", 0, 12)); // NOI18N
@@ -68,15 +70,17 @@ public class campoDeBatalha extends javax.swing.JFrame {
             .addGap(0, 200, Short.MAX_VALUE)
         );
 
+        jScrollPane2.setViewportView(jTextPane1);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(textArea1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addComponent(Quadro1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(Quadro1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jScrollPane2)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -84,8 +88,8 @@ public class campoDeBatalha extends javax.swing.JFrame {
                 .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Quadro1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(textArea1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         fechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Sprites/Blastoise.png"))); // NOI18N
@@ -148,12 +152,21 @@ public class campoDeBatalha extends javax.swing.JFrame {
                 
                 if(b.getHp() <= 0)
                 {
+                    jTextPane1.setContentType("text/html");
+                    jTextPane1.setText("<html>"+b.apresentarPokemon()+"</html>");
+                    b.apresentarPokemon();
                     b.atacar();
                 } else if (ca.getHp() <= 0)
                 {
+                    jTextPane1.setContentType("text/html");
+                    jTextPane1.setText("<html>"+ca.apresentarPokemon()+"</html>");
+                    ca.apresentarPokemon();
                     ca.atacar();
                 } else if (cha.getHp() <= 0){
-                    ca.atacar();
+                    jTextPane1.setContentType("text/html");
+                    jTextPane1.setText("<html>"+cha.apresentarPokemon()+"</html>");
+                    cha.apresentarPokemon();
+                    cha.atacar();
                 }
     
                 
@@ -168,11 +181,20 @@ public class campoDeBatalha extends javax.swing.JFrame {
                 
                 if(d.getHp() <= 0)
                 {
+                    jTextPane1.setContentType("text/html");
+                    jTextPane1.setText("<html>"+d.apresentarPokemon()+"</html>");
+                    d.apresentarPokemon();
                     d.atacar();
                 } else if (ma.getHp() <= 0)
                 {
+                    jTextPane1.setContentType("text/html");
+                    jTextPane1.setText("<html>"+ma.apresentarPokemon()+"</html>");
+                    ma.apresentarPokemon();
                     ma.atacar();
                 } else if (od.getHp() <= 0){
+                    jTextPane1.setContentType("text/html");
+                    jTextPane1.setText("<html>"+od.apresentarPokemon()+"</html>");
+                    od.apresentarPokemon();
                     od.atacar();
                 }
                 
@@ -187,11 +209,20 @@ public class campoDeBatalha extends javax.swing.JFrame {
                 
                 if(pid.getHp() <= 0)
                 {
+                    jTextPane1.setContentType("text/html");
+                    jTextPane1.setText("<html>"+pid.apresentarPokemon()+"</html>");
                     pid.atacar();
                 } else if (pik.getHp() <= 0)
                 {
+                    jTextPane1.setContentType("text/html");
+                    jTextPane1.setText("<html>"+pik.apresentarPokemon()+"</html>");
+                    pik.apresentarPokemon();
                     pik.atacar();
                 } else if (psy.getHp() <= 0){
+                    //jTextPane1.setContentType("text/html");
+                    //jTextPane1.setText("<html>"+m.apresentaTreinador()+"</html>");
+                    jTextPane1.setContentType("text/html");
+                    jTextPane1.setText("<html>"+psy.apresentarPokemon()+"</html>");
                     psy.atacar();
                 }
             default:
@@ -238,7 +269,9 @@ public class campoDeBatalha extends javax.swing.JFrame {
     private javax.swing.JButton atacar;
     private javax.swing.JButton fechar;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextPane jTextPane1;
     private java.awt.Label label1;
-    private java.awt.TextArea textArea1;
+    private java.awt.TextField textField1;
     // End of variables declaration//GEN-END:variables
 }
