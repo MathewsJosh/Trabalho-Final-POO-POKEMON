@@ -173,5 +173,11 @@ public final class Psyduck extends Pokemon implements Agua
         System.out.println("Surf! - ULTIMATE");
         return this.ataqueEspecial;
     }
+    
+    
+    @Override
+    public int sofredano(int dano){
+        return super.sofredano(dano);
+    }
 
 }

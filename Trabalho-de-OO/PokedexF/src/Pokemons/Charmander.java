@@ -155,5 +155,10 @@ public final class Charmander extends Pokemon implements Fogo
         System.out.println("Inferno! - ULTIMATE");
         return this.ataqueEspecial;
     }
+    
+    @Override
+    public int sofredano(int dano){
+        return super.sofredano(dano);
+    }
 
 }

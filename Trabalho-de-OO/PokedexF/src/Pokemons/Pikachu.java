@@ -155,4 +155,10 @@ public final class Pikachu extends Pokemon implements Eletrico
         System.out.println("Choque do Trovão! - ULTIMATE");
         return this.ataqueEspecial;
     }
+    
+    
+    @Override
+    public int sofredano(int dano){
+        return super.sofredano(dano);
+    }
 }

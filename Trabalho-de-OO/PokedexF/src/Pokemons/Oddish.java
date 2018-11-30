@@ -206,4 +206,9 @@ public final class Oddish extends Pokemon implements Grama, Veneno
         System.out.println("Fumaça venenosa! - ULTIMATE");
         return this.ataqueEspecial;
     }
+    
+    @Override
+    public int sofredano(int dano){
+        return super.sofredano(dano);
+    }
 }

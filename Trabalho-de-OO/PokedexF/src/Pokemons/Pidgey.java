@@ -228,5 +228,10 @@ public final class Pidgey extends Pokemon implements Normal, Voador
         System.out.println("Furacão! - ULTIMATE");
         return this.ataqueEspecial;
     }
-
+    
+    
+    @Override
+    public int sofredano(int dano){
+        return super.sofredano(dano);
+    }
 }
