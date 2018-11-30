@@ -150,6 +150,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
             }
         });
 
+        Iniciar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Sprites/Mew.png"))); // NOI18N
         Iniciar.setText("Iniciar");
         Iniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
