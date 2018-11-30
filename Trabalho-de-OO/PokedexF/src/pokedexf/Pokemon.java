@@ -85,7 +85,11 @@ public abstract class Pokemon
                                               
     }
     
-    
+    public int sofredano(int dano)
+    {
+        this.hp=this.hp-dano;
+        return this.hp;
+    }
 
     /**
      * Sobrescrição da Classe Mãe

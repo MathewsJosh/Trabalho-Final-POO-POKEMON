@@ -17,7 +17,10 @@ import pokedexf.Pokemon;
  * @author Renan
  */
 public class campoDeBatalha extends javax.swing.JFrame {
-
+    
+    int dano_meu;
+    int dano_ini;
+    
     /**
      * Creates new form campoDeBatalha
      */
@@ -166,21 +169,29 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+b.apresentarPokemon()+"</html>");
                     b.apresentarPokemon();
-                    //while()
-                        b.atacar();
+                    while(b.getHp() >= 0){
+                        dano_meu = b.atacar();
+                        System.out.println("HP: "+b.getHp());
+                        
+                      //  sofreDano(dano);
+                    }
                 } else if (ca.getHp() >= 0)
                 {
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+ca.apresentarPokemon()+"</html>");
                     ca.apresentarPokemon();
-                    //while()
-                        ca.atacar();
+                    while(ca.getHp() >= 0){
+                        dano_meu = ca.atacar();
+                        System.out.println("HP: "+ca.getHp());
+                    }
                 } else if (cha.getHp() >= 0){
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+cha.apresentarPokemon()+"</html>");
                     cha.apresentarPokemon();
-                    //while()
-                        cha.atacar();
+                    while(cha.getHp() >= 0){
+                        dano_meu = cha.atacar();
+                        System.out.println("HP: "+cha.getHp());
+                    }
                 } else {
                 jTextPane1.setContentType("text/html");
                 jTextPane1.setText("<html>"+ganharOuPerder(j, ca, cha, b)+"</html>");
@@ -199,21 +210,27 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+d.apresentarPokemon()+"</html>");
                     d.apresentarPokemon();
-                    //while()    
-                        d.atacar();
+                    while(d.getHp() >= 0){    
+                        dano_meu = d.atacar();
+                        System.out.println("HP: "+d.getHp());
+                    }
                 } else if (ma.getHp() >= 0)
                 {
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+ma.apresentarPokemon()+"</html>");
                     ma.apresentarPokemon();
-                    //while()
-                        ma.atacar();
+                    while(ma.getHp() >= 0){
+                        dano_meu = ma.atacar();
+                        System.out.println("HP: "+ma.getHp());
+                    }
                 } else if (od.getHp() >= 0){
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+od.apresentarPokemon()+"</html>");
                     od.apresentarPokemon();
-                    //while()
-                        od.atacar();
+                    while(od.getHp() >= 0){
+                        dano_meu = od.atacar();
+                        System.out.println("HP: "+od.getHp());
+                    }
                 }
                 else {
                 jTextPane1.setContentType("text/html");
@@ -232,22 +249,25 @@ public class campoDeBatalha extends javax.swing.JFrame {
                 {
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+pid.apresentarPokemon()+"</html>");
-                    //while()
-                        pid.atacar();
+                    while(pid.getHp() >= 0){
+                        dano_meu = pid.atacar();
+                    }
                 } else if (pik.getHp() >= 0)
                 {
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+pik.apresentarPokemon()+"</html>");
                     pik.apresentarPokemon();
-                    //while()
-                        pik.atacar();
+                    while(pik.getHp() >= 0){
+                        dano_meu = pik.atacar();
+                    }
                 } else if (psy.getHp() >= 0){
                     //jTextPane1.setContentType("text/html");
                     //jTextPane1.setText("<html>"+m.apresentaTreinador()+"</html>");
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+psy.apresentarPokemon()+"</html>");
-                    //while()
-                        psy.atacar();
+                    while(psy.getHp() >= 0){
+                        dano_meu = psy.atacar();
+                    }
                 }
                 else {
                 jTextPane1.setContentType("text/html");
