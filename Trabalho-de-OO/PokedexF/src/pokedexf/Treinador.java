@@ -38,4 +38,14 @@ public class Treinador {
         
         insigneas = 0;
     }
+
+    public Treinador()
+    {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public Treinador(String luiz, int i, String m, int i0, int i1, int i2, int i3)
+    {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

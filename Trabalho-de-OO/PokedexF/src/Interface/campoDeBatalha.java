@@ -5,27 +5,57 @@
  */
 package Interface;
 
+import Pokemons.*;
 import java.awt.Canvas;
 import java.awt.Component;
+import pokedexf.*;
+import treinadores.*;
+import jtext
 
 /**
  *
  * @author Renan
  */
-public class campoDeBatalha extends javax.swing.JFrame {
+public class campoDeBatalha extends javax.swing.JFrame
+{
 
     /**
      * Creates new form campoDeBatalha
      */
-    public campoDeBatalha() {
+    public campoDeBatalha()
+    {
         initComponents();
-        
-       /* Canvas ImagemPokeball = new Canvas();
+        Treinador adversario = new Treinador("Luiz", 18, "M", 0, 3, 0, 0);
+        Squirtle sq = new Squirtle();
+        Vulpix vul = new Vulpix();
+        Zubat zub = new Zubat();
+
+        if (sq.getHp() <= 0)
+        {
+            jTextPane1.setContentType("text/html");
+            jTextPane1.setText("<html>" + sq.apresentarPokemon() + "</html>");
+            sq.apresentarPokemon();
+            sq.atacar();
+        }
+        else if (vul.getHp() <= 0)
+        {
+            jTextPane1.setContentType("text/html");
+            jTextPane1.setText("<html>" + vul.apresentarPokemon() + "</html>");
+            vul.apresentarPokemon();
+            vul.atacar();
+        }
+        else if (zub.getHp() <= 0)
+        {
+            jTextPane1.setContentType("text/html");
+            jTextPane1.setText("<html>" + zub.apresentarPokemon() + "</html>");
+            zub.apresentarPokemon();
+            zub.atacar();
+        }
+
+        /* Canvas ImagemPokeball = new Canvas();
         this.Quadro1.add(ImagemPokeball);*/
-       // Implementar Uma Imagem para o fundo do campo de batalha, eu pensei em uma das Pokebolas que esá na pasta Sprite
+        // Implementar Uma Imagem para o fundo do campo de batalha, eu pensei em uma das Pokebolas que esá na pasta Sprite
     }
-    
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -141,33 +171,47 @@ public class campoDeBatalha extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String args[])
+    {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+        try
+        {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels())
+            {
+                if ("Nimbus".equals(info.getName()))
+                {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
+        }
+        catch (ClassNotFoundException ex)
+        {
             java.util.logging.Logger.getLogger(campoDeBatalha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
+        }
+        catch (InstantiationException ex)
+        {
             java.util.logging.Logger.getLogger(campoDeBatalha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
+        }
+        catch (IllegalAccessException ex)
+        {
             java.util.logging.Logger.getLogger(campoDeBatalha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        }
+        catch (javax.swing.UnsupportedLookAndFeelException ex)
+        {
             java.util.logging.Logger.getLogger(campoDeBatalha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
+        java.awt.EventQueue.invokeLater(new Runnable()
+        {
+            public void run()
+            {
                 new campoDeBatalha().setVisible(true);
             }
         });
