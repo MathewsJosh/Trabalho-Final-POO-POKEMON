@@ -207,5 +207,11 @@ public final class Zubat extends Pokemon implements Veneno, Voador
         System.out.println("Furacão! - ULTIMATE");
         return this.ataqueEspecial;
     }
+    
+    
+    @Override
+    public int sofredano(int dano){
+        return super.sofredano(dano);
+    }
 
 }

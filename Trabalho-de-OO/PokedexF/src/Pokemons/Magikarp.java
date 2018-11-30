@@ -171,5 +171,11 @@ public final class Magikarp extends Pokemon implements Agua
         System.out.println("Mergulho! - ULTIMATE");
         return this.ataqueEspecial;
     }
+    
+    
+    @Override
+    public int sofredano(int dano){
+        return super.sofredano(dano);
+    }
 
 }

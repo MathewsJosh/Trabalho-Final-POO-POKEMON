@@ -152,4 +152,9 @@ public final class Caterpie extends Pokemon implements Inseto
         System.out.println("Corte X! - ULTIMATE");
         return this.ataqueEspecial;
     }
+    
+    @Override
+    public int sofredano(int dano){
+        return super.sofredano(dano);
+    }
 }

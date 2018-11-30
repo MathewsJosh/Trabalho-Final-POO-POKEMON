@@ -155,5 +155,9 @@ public final class Diglett extends Pokemon implements Terra
         System.out.println("Arrasar! - ULTIMATE");
         return this.ataqueEspecial;
     }
-
+    
+    @Override
+    public int sofredano(int dano){
+        return super.sofredano(dano);
+    }
 }

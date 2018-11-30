@@ -54,6 +54,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
             sq.apresentarPokemon();
             while(sq.getHp() <= 0){
                 dano_ini = sq.atacar();
+                sq.sofredano(dano_meu);
             }
         }
         else if (vul.getHp() <= 0)
@@ -63,6 +64,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
             vul.apresentarPokemon();
             while(vul.getHp() <= 0){
                 dano_ini = vul.atacar();
+                vul.sofredano(dano_meu);
             }
         }
         else if (zub.getHp() <= 0)
@@ -72,6 +74,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
             zub.apresentarPokemon();
             while(zub.getHp() <= 0){
                 dano_ini = zub.atacar();
+                zub.sofredano(dano_meu);
             }
         }
 
@@ -209,6 +212,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     b.apresentarPokemon();
                     while(b.getHp() >= 0){
                         dano_meu = b.atacar();
+                        b.sofredano(dano_meu);
                         System.out.println("HP: "+b.getHp());
                         
                       //  sofreDano(dano);
@@ -220,6 +224,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     ca.apresentarPokemon();
                     while(ca.getHp() >= 0){
                         dano_meu = ca.atacar();
+                        ca.sofredano(dano_meu);
                         System.out.println("HP: "+ca.getHp());
                     }
                 } else if (cha.getHp() >= 0){
@@ -228,6 +233,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     cha.apresentarPokemon();
                     while(cha.getHp() >= 0){
                         dano_meu = cha.atacar();
+                        cha.sofredano(dano_meu);
                         System.out.println("HP: "+cha.getHp());
                     }
                 } else {
@@ -250,6 +256,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     d.apresentarPokemon();
                     while(d.getHp() >= 0){    
                         dano_meu = d.atacar();
+                        d.sofredano(dano_meu);
                         System.out.println("HP: "+d.getHp());
                     }
                 } else if (ma.getHp() >= 0)
@@ -259,6 +266,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     ma.apresentarPokemon();
                     while(ma.getHp() >= 0){
                         dano_meu = ma.atacar();
+                        ma.sofredano(dano_meu);
                         System.out.println("HP: "+ma.getHp());
                     }
                 } else if (od.getHp() >= 0){
@@ -267,6 +275,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     od.apresentarPokemon();
                     while(od.getHp() >= 0){
                         dano_meu = od.atacar();
+                        od.sofredano(dano_meu);
                         System.out.println("HP: "+od.getHp());
                     }
                 }
@@ -289,6 +298,8 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     jTextPane1.setText("<html>"+pid.apresentarPokemon()+"</html>");
                     while(pid.getHp() >= 0){
                         dano_meu = pid.atacar();
+                        pid.sofredano(dano_meu);
+                        System.out.println("HP: "+pid.getHp());
                     }
                 } else if (pik.getHp() >= 0)
                 {
@@ -297,6 +308,8 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     pik.apresentarPokemon();
                     while(pik.getHp() >= 0){
                         dano_meu = pik.atacar();
+                        pik.sofredano(dano_meu);
+                        System.out.println("HP: "+pik.getHp());
                     }
                 } else if (psy.getHp() >= 0){
                     //jTextPane1.setContentType("text/html");
@@ -305,6 +318,8 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     jTextPane1.setText("<html>"+psy.apresentarPokemon()+"</html>");
                     while(psy.getHp() >= 0){
                         dano_meu = psy.atacar();
+                        psy.sofredano(dano_meu);
+                        System.out.println("HP: "+psy.getHp());
                     }
                 }
                 else {
