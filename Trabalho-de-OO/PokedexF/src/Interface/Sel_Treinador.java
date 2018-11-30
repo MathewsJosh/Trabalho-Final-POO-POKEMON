@@ -9,7 +9,6 @@ import Treinadores.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
 /**
  *
  * @author Renan
@@ -294,14 +293,16 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
     }//GEN-LAST:event_JuliaBActionPerformed
 
     private void escolhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_escolhaActionPerformed
-            
+         // this.num_pokemons = campo_pokemons.getSelectedIndex();
+         controle c;
+         
     }//GEN-LAST:event_escolhaActionPerformed
 
     private void proximoPassoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proximoPassoActionPerformed
             this.setVisible(false);
             
-            EscolhaPokemons e = new EscolhaPokemons();
-            e.setVisible(true);
+            campoDeBatalha c = new campoDeBatalha();
+            c.setVisible(true);
     }//GEN-LAST:event_proximoPassoActionPerformed
 
     private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed
@@ -348,6 +349,10 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void getSelectedIndex() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
