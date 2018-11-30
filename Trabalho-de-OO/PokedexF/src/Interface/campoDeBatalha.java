@@ -213,7 +213,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     while(b.getHp() >= 0){
                         dano_meu = b.atacar();
                         b.sofredano(dano_meu);
-                        System.out.println("HP: "+b.getHp());
+                        jTextPane1.setText("<html>"+b.getHp()+"</html>");
                         
                       //  sofreDano(dano);
                     }
@@ -225,7 +225,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     while(ca.getHp() >= 0){
                         dano_meu = ca.atacar();
                         ca.sofredano(dano_meu);
-                        System.out.println("HP: "+ca.getHp());
+                        jTextPane1.setText("<html>"+ca.getHp()+"</html>");
                     }
                 } else if (cha.getHp() >= 0){
                     jTextPane1.setContentType("text/html");
@@ -234,7 +234,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     while(cha.getHp() >= 0){
                         dano_meu = cha.atacar();
                         cha.sofredano(dano_meu);
-                        System.out.println("HP: "+cha.getHp());
+                        jTextPane1.setText("<html>"+cha.getHp()+"</html>");
                     }
                 } else {
                 jTextPane1.setContentType("text/html");
@@ -257,7 +257,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     while(d.getHp() >= 0){    
                         dano_meu = d.atacar();
                         d.sofredano(dano_meu);
-                        System.out.println("HP: "+d.getHp());
+                        jTextPane1.setText("<html>"+d.getHp()+"</html>");
                     }
                 } else if (ma.getHp() >= 0)
                 {
@@ -267,7 +267,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     while(ma.getHp() >= 0){
                         dano_meu = ma.atacar();
                         ma.sofredano(dano_meu);
-                        System.out.println("HP: "+ma.getHp());
+                        jTextPane1.setText("<html>"+ma.getHp()+"</html>");
                     }
                 } else if (od.getHp() >= 0){
                     jTextPane1.setContentType("text/html");
@@ -276,7 +276,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     while(od.getHp() >= 0){
                         dano_meu = od.atacar();
                         od.sofredano(dano_meu);
-                        System.out.println("HP: "+od.getHp());
+                        jTextPane1.setText("<html>"+od.getHp()+"</html>");
                     }
                 }
                 else {
@@ -299,7 +299,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     while(pid.getHp() >= 0){
                         dano_meu = pid.atacar();
                         pid.sofredano(dano_meu);
-                        System.out.println("HP: "+pid.getHp());
+                        jTextPane1.setText("<html>"+pid.getHp()+"</html>");
                     }
                 } else if (pik.getHp() >= 0)
                 {
@@ -309,17 +309,18 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     while(pik.getHp() >= 0){
                         dano_meu = pik.atacar();
                         pik.sofredano(dano_meu);
-                        System.out.println("HP: "+pik.getHp());
+                        jTextPane1.setText("<html>"+pik.getHp()+"</html>");
                     }
                 } else if (psy.getHp() >= 0){
                     //jTextPane1.setContentType("text/html");
                     //jTextPane1.setText("<html>"+m.apresentaTreinador()+"</html>");
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+psy.apresentarPokemon()+"</html>");
+                    
                     while(psy.getHp() >= 0){
                         dano_meu = psy.atacar();
                         psy.sofredano(dano_meu);
-                        System.out.println("HP: "+psy.getHp());
+                        jTextPane1.setText("<html>"+psy.getHp()+"</html>");
                     }
                 }
                 else {
