@@ -40,6 +40,8 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
         Superior = new javax.swing.JPanel();
         Inferior = new javax.swing.JPanel();
         JanelaDeApresentacao = new java.awt.TextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         jPanel1 = new javax.swing.JPanel();
         JuliaB = new javax.swing.JButton();
         MathewsB = new javax.swing.JButton();
@@ -97,6 +99,10 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
                     .addComponent(JanelaDeApresentacao, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(28, Short.MAX_VALUE)))
         );
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane2.setViewportView(jTextArea1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -345,6 +351,8 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JButton proximoPasso;
     // End of variables declaration//GEN-END:variables
