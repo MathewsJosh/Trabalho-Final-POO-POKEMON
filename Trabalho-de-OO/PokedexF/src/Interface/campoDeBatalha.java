@@ -21,8 +21,6 @@ public class campoDeBatalha extends javax.swing.JFrame {
     static int dano_meu;
     static int dano_ini;
     
-    Treinador t;
-    Pokemon a,b,c;
     
     /**
      * Creates new form campoDeBatalha
@@ -205,10 +203,6 @@ public class campoDeBatalha extends javax.swing.JFrame {
                 Caterpie ca = new Caterpie();
                 Charmander cha = new Charmander();
                 
-                this.t = j;
-                this.a = b;
-                this.b = ca;
-                this.c = cha;
                 
                 if(b.getHp() >= 0)
                 {
@@ -255,10 +249,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                 Magikarp ma = new Magikarp();
                 Oddish od = new Oddish();
                 
-                this.t = m;
-                this.a = d;
-                this.b = ma;
-                this.c = od;
+               
                 
                 if(d.getHp() >= 0)
                 {
@@ -297,10 +288,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                 Pikachu pik = new Pikachu();
                 Psyduck psy = new Psyduck();
                 
-                this.t = r;
-                this.a = pid;
-                this.b = pik;
-                this.c = psy;
+              
                 
                 if(pid.getHp() >= 0)
                 {
