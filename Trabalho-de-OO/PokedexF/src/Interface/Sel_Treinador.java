@@ -15,7 +15,7 @@ import java.awt.event.ActionListener;
  */
 public class Sel_Treinador extends javax.swing.JFrame implements ActionListener {
 
-    
+    static int control;
     
     /**
      * Creates new form Sel_Treinador
@@ -293,16 +293,18 @@ public class Sel_Treinador extends javax.swing.JFrame implements ActionListener 
     }//GEN-LAST:event_JuliaBActionPerformed
 
     private void escolhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_escolhaActionPerformed
-         // this.num_pokemons = campo_pokemons.getSelectedIndex();
-         controle c;
-         
+        // Inutil
     }//GEN-LAST:event_escolhaActionPerformed
 
     private void proximoPassoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proximoPassoActionPerformed
             this.setVisible(false);
             
+            control = this.escolha.getSelectedIndex();
+            
             campoDeBatalha c = new campoDeBatalha();
             c.setVisible(true);
+            
+           // System.out.println(this.escolha.getSelectedIndex());
     }//GEN-LAST:event_proximoPassoActionPerformed
 
     private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed

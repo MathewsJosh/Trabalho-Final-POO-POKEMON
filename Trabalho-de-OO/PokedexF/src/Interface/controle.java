@@ -12,11 +12,12 @@ package Interface;
 
 public class controle {
     
-    static int control;
+    
     
      public void controleDeTela(){
         TelaPrincipal telaPrincipal = new TelaPrincipal();
         telaPrincipal.setVisible(true);
+         
      }
     
 }
