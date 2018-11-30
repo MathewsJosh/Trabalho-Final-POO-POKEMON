@@ -9,11 +9,15 @@ package Interface;
  *
  * @author Renan
  */
+
 public class controle {
+    
+    
     
      public void controleDeTela(){
         TelaPrincipal telaPrincipal = new TelaPrincipal();
         telaPrincipal.setVisible(true);
+         
      }
     
 }
