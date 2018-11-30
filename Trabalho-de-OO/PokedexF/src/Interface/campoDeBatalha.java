@@ -170,7 +170,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     jTextPane1.setText("<html>"+b.apresentarPokemon()+"</html>");
                     b.apresentarPokemon();
                     while(b.getHp() >= 0){
-                        b.atacar();
+                        dano_meu = b.atacar();
                         
                       //  sofreDano(dano);
                     }
@@ -180,14 +180,14 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     jTextPane1.setText("<html>"+ca.apresentarPokemon()+"</html>");
                     ca.apresentarPokemon();
                     while(ca.getHp() >= 0){
-                        ca.atacar();
+                        dano_meu = ca.atacar();
                     }
                 } else if (cha.getHp() >= 0){
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+cha.apresentarPokemon()+"</html>");
                     cha.apresentarPokemon();
                     while(cha.getHp() >= 0){
-                        cha.atacar();
+                        dano_meu = cha.atacar();
                     }
                 } else {
                 jTextPane1.setContentType("text/html");
@@ -208,7 +208,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     jTextPane1.setText("<html>"+d.apresentarPokemon()+"</html>");
                     d.apresentarPokemon();
                     while(d.getHp() >= 0){    
-                        d.atacar();
+                        dano_meu = d.atacar();
                     }
                 } else if (ma.getHp() >= 0)
                 {
@@ -216,14 +216,14 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     jTextPane1.setText("<html>"+ma.apresentarPokemon()+"</html>");
                     ma.apresentarPokemon();
                     while(ma.getHp() >= 0){
-                        ma.atacar();
+                        dano_meu = ma.atacar();
                     }
                 } else if (od.getHp() >= 0){
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+od.apresentarPokemon()+"</html>");
                     od.apresentarPokemon();
                     while(od.getHp() >= 0){
-                        od.atacar();
+                        dano_meu = od.atacar();
                     }
                 }
                 else {
@@ -244,7 +244,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+pid.apresentarPokemon()+"</html>");
                     while(pid.getHp() >= 0){
-                        pid.atacar();
+                        dano_meu = pid.atacar();
                     }
                 } else if (pik.getHp() >= 0)
                 {
@@ -252,7 +252,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     jTextPane1.setText("<html>"+pik.apresentarPokemon()+"</html>");
                     pik.apresentarPokemon();
                     while(pik.getHp() >= 0){
-                        pik.atacar();
+                        dano_meu = pik.atacar();
                     }
                 } else if (psy.getHp() >= 0){
                     //jTextPane1.setContentType("text/html");
@@ -260,7 +260,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+psy.apresentarPokemon()+"</html>");
                     while(psy.getHp() >= 0){
-                        psy.atacar();
+                        dano_meu = psy.atacar();
                     }
                 }
                 else {
