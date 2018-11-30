@@ -6,6 +6,7 @@
 package Interface;
 
 import static Interface.Sel_Treinador.control;
+import Pokemons.*;
 import Treinadores.*;
 import java.awt.Canvas;
 import java.awt.Component;
@@ -42,7 +43,6 @@ public class campoDeBatalha extends javax.swing.JFrame {
         textArea1 = new java.awt.TextArea();
         label1 = new java.awt.Label();
         Quadro1 = new javax.swing.JPanel();
-        escolha_pokemon = new javax.swing.JComboBox<>();
         fechar = new javax.swing.JButton();
         atacar = new javax.swing.JButton();
 
@@ -68,8 +68,6 @@ public class campoDeBatalha extends javax.swing.JFrame {
             .addGap(0, 200, Short.MAX_VALUE)
         );
 
-        escolha_pokemon.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -77,17 +75,13 @@ public class campoDeBatalha extends javax.swing.JFrame {
             .addComponent(textArea1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(escolha_pokemon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(Quadro1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(escolha_pokemon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Quadro1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -145,12 +139,61 @@ public class campoDeBatalha extends javax.swing.JFrame {
             case 0:
                 Julia j = new Julia();
                 j.apresentaTreinador();
+                
+                j.setpokemons();
+                
+                Bulbassauro b = new Bulbassauro();
+                Caterpie ca = new Caterpie();
+                Charmander cha = new Charmander();
+                
+                if(b.getHp() <= 0)
+                {
+                    b.atacar();
+                } else if (ca.getHp() <= 0)
+                {
+                    ca.atacar();
+                } else if (cha.getHp() <= 0){
+                    ca.atacar();
+                }
+    
+                
+                
             case 1:
                 Mathews m = new Mathews();
                 m.apresentaTreinador();
+                
+                Diglett d = new Diglett();
+                Magikarp ma = new Magikarp();
+                Oddish od = new Oddish();
+                
+                if(d.getHp() <= 0)
+                {
+                    d.atacar();
+                } else if (ma.getHp() <= 0)
+                {
+                    ma.atacar();
+                } else if (od.getHp() <= 0){
+                    od.atacar();
+                }
+                
+                
             case 2:
                 Renan r = new Renan();
                 r.apresentaTreinador();
+                
+                Pidgey pid = new Pidgey();
+                Pikachu pik = new Pikachu();
+                Psyduck psy = new Psyduck();
+                
+                if(pid.getHp() <= 0)
+                {
+                    pid.atacar();
+                } else if (pik.getHp() <= 0)
+                {
+                    pik.atacar();
+                } else if (psy.getHp() <= 0){
+                    psy.atacar();
+                }
             default:
         }
     }//GEN-LAST:event_atacarActionPerformed
@@ -193,7 +236,6 @@ public class campoDeBatalha extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Quadro1;
     private javax.swing.JButton atacar;
-    private javax.swing.JComboBox<String> escolha_pokemon;
     private javax.swing.JButton fechar;
     private javax.swing.JPanel jPanel1;
     private java.awt.Label label1;

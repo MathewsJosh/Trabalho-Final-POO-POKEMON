@@ -42,6 +42,14 @@ public final class Mathews extends Treinador
     {
         super.GanharPokemons(x);
     }
+    
+     @Override
+    public void setpokemons()
+    {
+        super.setpokemons();
+      
+    
+    }
 
     /**
      * A cada 100 de xp, sobe de nivel. Essa classe funciona em conjunto com a

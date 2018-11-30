@@ -84,6 +84,8 @@ public abstract class Pokemon
         "<br> Velocidade: " + getVelocidade() + "\n";
                                               
     }
+    
+    
 
     /**
      * Sobrescrição da Classe Mãe

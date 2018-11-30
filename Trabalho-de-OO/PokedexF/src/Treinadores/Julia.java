@@ -8,6 +8,8 @@ package Treinadores;
 import TiposDePokemon.*;
 import pokedexf.*;
 import Pokemons.*;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Scanner;
 
 /** Classe Julia é um Treinador com todos os seus dados definidos
@@ -53,6 +55,15 @@ public final class Julia extends Treinador
     {
         super.subirDeNivel(n);
     }
+    
+    @Override
+    public void setpokemons()
+    {
+        super.setpokemons();
+    
+    }
+    
+   
 
     /**
      * Ganhar um quantidade de XP Se a soma do xp atual e xp do parametro forem

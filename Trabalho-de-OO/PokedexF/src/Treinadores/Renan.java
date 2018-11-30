@@ -29,6 +29,7 @@ public final class Renan extends Treinador
     /**
      * Exibe os todos os dados do Treinador
      *
+     * @return 
      */
     @Override
     public String apresentaTreinador()
@@ -57,6 +58,17 @@ public final class Renan extends Treinador
     public void subirDeNivel(int n)                     
     {
         super.subirDeNivel(n);
+    }
+    
+   
+    @Override
+    public void setpokemons()
+    {
+        super.setpokemons();
+        Pidgey pid = new Pidgey();
+        Pikachu pik = new Pikachu();
+        Psyduck psy = new Psyduck();
+      
     }
 
     /**
