@@ -10,6 +10,7 @@ import Pokemons.*;
 import Treinadores.*;
 import java.awt.Canvas;
 import java.awt.Component;
+import pokedexf.Pokemon;
 
 /**
  *
@@ -26,6 +27,14 @@ public class campoDeBatalha extends javax.swing.JFrame {
        /* Canvas ImagemPokeball = new Canvas();
         this.Quadro1.add(ImagemPokeball);*/
        // Implementar Uma Imagem para o fundo do campo de batalha, eu pensei em uma das Pokebolas que esá na pasta Sprite
+    }
+    
+    public String ganharOuPerder(Treinador t, Pokemon p1,Pokemon p2,Pokemon p3){
+        if (p1.getHp() <= 0 && p2.getHp() <= 0 && p3.getHp() <= 0)
+        {
+            return "<br> Treinador: " + t.getNome()+ " Perdeu!";
+        } else
+            return "<br> Treinador: " + t.getNome()+ " Ganhou!";
     }
     
     
@@ -70,6 +79,7 @@ public class campoDeBatalha extends javax.swing.JFrame {
             .addGap(0, 200, Short.MAX_VALUE)
         );
 
+        jTextPane1.setEditable(false);
         jScrollPane2.setViewportView(jTextPane1);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -150,26 +160,28 @@ public class campoDeBatalha extends javax.swing.JFrame {
                 Caterpie ca = new Caterpie();
                 Charmander cha = new Charmander();
                 
-                if(b.getHp() <= 0)
+                if(b.getHp() >= 0)
                 {
+                    //jScrollPane2.setVisible(true);
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+b.apresentarPokemon()+"</html>");
                     b.apresentarPokemon();
                     b.atacar();
-                } else if (ca.getHp() <= 0)
+                } else if (ca.getHp() >= 0)
                 {
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+ca.apresentarPokemon()+"</html>");
                     ca.apresentarPokemon();
                     ca.atacar();
-                } else if (cha.getHp() <= 0){
+                } else if (cha.getHp() >= 0){
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+cha.apresentarPokemon()+"</html>");
                     cha.apresentarPokemon();
                     cha.atacar();
+                } else {
+                jTextPane1.setContentType("text/html");
+                jTextPane1.setText("<html>"+ganharOuPerder(j, ca, cha, b)+"</html>");
                 }
-    
-                
                 
             case 1:
                 Mathews m = new Mathews();
@@ -179,25 +191,28 @@ public class campoDeBatalha extends javax.swing.JFrame {
                 Magikarp ma = new Magikarp();
                 Oddish od = new Oddish();
                 
-                if(d.getHp() <= 0)
+                if(d.getHp() >= 0)
                 {
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+d.apresentarPokemon()+"</html>");
                     d.apresentarPokemon();
                     d.atacar();
-                } else if (ma.getHp() <= 0)
+                } else if (ma.getHp() >= 0)
                 {
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+ma.apresentarPokemon()+"</html>");
                     ma.apresentarPokemon();
                     ma.atacar();
-                } else if (od.getHp() <= 0){
+                } else if (od.getHp() >= 0){
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+od.apresentarPokemon()+"</html>");
                     od.apresentarPokemon();
                     od.atacar();
                 }
-                
+                else {
+                jTextPane1.setContentType("text/html");
+                jTextPane1.setText("<html>"+ganharOuPerder(m, ma, od, d)+"</html>");
+                }
                 
             case 2:
                 Renan r = new Renan();
@@ -207,23 +222,27 @@ public class campoDeBatalha extends javax.swing.JFrame {
                 Pikachu pik = new Pikachu();
                 Psyduck psy = new Psyduck();
                 
-                if(pid.getHp() <= 0)
+                if(pid.getHp() >= 0)
                 {
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+pid.apresentarPokemon()+"</html>");
                     pid.atacar();
-                } else if (pik.getHp() <= 0)
+                } else if (pik.getHp() >= 0)
                 {
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+pik.apresentarPokemon()+"</html>");
                     pik.apresentarPokemon();
                     pik.atacar();
-                } else if (psy.getHp() <= 0){
+                } else if (psy.getHp() >= 0){
                     //jTextPane1.setContentType("text/html");
                     //jTextPane1.setText("<html>"+m.apresentaTreinador()+"</html>");
                     jTextPane1.setContentType("text/html");
                     jTextPane1.setText("<html>"+psy.apresentarPokemon()+"</html>");
                     psy.atacar();
+                }
+                else {
+                jTextPane1.setContentType("text/html");
+                jTextPane1.setText("<html>"+ganharOuPerder(r, psy, pik, pid)+"</html>");
                 }
             default:
         }
